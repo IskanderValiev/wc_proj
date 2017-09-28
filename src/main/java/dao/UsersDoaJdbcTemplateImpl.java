@@ -3,6 +3,7 @@ package dao;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import users.User;
@@ -100,4 +101,5 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     public String getPasswordByLogin(String login) {
        return template.queryForObject(SQL_SELECT_PASSWORD_BY_LOGIN, new String[]{login}, String.class);
     }
+
 }

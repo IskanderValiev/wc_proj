@@ -26,7 +26,8 @@
             position: relative;
         }
 
-        .header table {
+        .header form {
+            background: darkviolet;
             float: right;
             font-size: 18px;
             margin: 0px auto;
@@ -126,17 +127,19 @@
 
     <div class="header">
         <span style="vertical-align: -22px">FIFA World Cup 2018</span>
-        <table>
-            <tr>
-                <td><label for="login">Login:</label></td>
-                <td><label for="pass">Password:</label></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="enterlogin"></td>
-                <td><input type="password" name="enterpass"></td>
-                <td><input type="submit" name="signin" value="Sign In"></td>
-            </tr>
-        </table>
+        <form action="/profile" method="post">
+            <table>
+                <tr>
+                    <td><label>Login:</label></td>
+                    <td><label>Password:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="enterlogin"></td>
+                    <td><input type="password" name="enterpass"></td>
+                    <td><input type="submit" name="signin" value="Sign In"></td>
+                </tr>
+            </table>
+        </form>
     </div>
 
     <hr>
@@ -164,7 +167,7 @@
                     </tr>
 
                     <tr>
-                        <td><label for="confirm">Confirm password:</label></td>
+                        <td><label for="cpassword">Confirm password:</label></td>
                         <td><input type="password" name="cpassword"></td>
                     </tr>
 

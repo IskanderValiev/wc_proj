@@ -79,8 +79,10 @@ public class AuthorizationServlet extends DispatcherServlet {
             super.forward("/worldcup/profile.jsp", req, resp);
         } else {
             if (req.getParameter("signin") != null) {
+                System.out.println(enterLogin);
+                System.out.println(enterPass);
                 if (usersDao.getPasswordByLogin(enterLogin).equals(enterPass)) {
-                    super.forward("worldcup/profile.jsp", req, resp);
+                    super.forward("/worldcup/profile.jsp", req, resp);
                 }
             }
         }
