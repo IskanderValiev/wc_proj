@@ -1,0 +1,89 @@
+body {
+     background-image: url(images/system/background.png);
+     color: #CCCC99;
+     font-family: DushaV5-Regular;
+}
+
+#container {
+     background: clear;
+     text-align: center;
+     size: cover;
+}
+
+#header {
+     height: 54px;
+     font-size: 35px;
+     text-align: left;
+     margin: 0px 50px 0px 0px;
+     position: relative;
+}
+
+#header span {
+     margin: 0px 0px 0px 20%;
+}
+
+.userlogin {
+     font-family: DushaV5-Regular;
+     float: right;
+     font-size: 24px;
+     margin: 0px 50px 0px 0px;
+     text-align: left;
+}
+
+.userlogin td {
+     height: 50px;
+     vertical-align: bottom;
+}
+
+#navigation {
+     background: clear;
+     float: left;
+     margin: 50px 0px 0px 50px;
+     width: 15%;
+     font-size: 28px;
+     text-align: left;
+}
+
+#navigation a {
+     width: 230px;
+     height: 50px;
+     text-align: left;
+     text-decoration: none;
+     color: #CCCC99;
+     font-size: 35px;
+}
+
+#navigation a:hover {
+     color: #FFF;
+}
+
+#content {
+     background: clear;
+     font-size: 28px;
+     float: left;
+     width: 80%;
+     margin: 50px 10px 0px 0px;
+}
+ 
+#kazanarena {
+     background: clear;
+     float: left;
+     margin: 50px 20px 50px 100px;
+}
+
+#kazanarenainfo {
+     background: clear;
+     float: left; 
+     margin: 50px 20px 50px 10px;
+     text-align: left;
+     color: white;
+}
+
+#clear {
+     clear: both;
+}
+ 
+#footer {
+     background: clear;
+     width: 100%;
+}

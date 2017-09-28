@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WorldCup2018Proj:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WorldCup2018Proj-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="WorldCup2018Proj:war exploded" />
+    </root>
+  </artifact>
+</component>
