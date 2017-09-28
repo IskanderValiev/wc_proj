@@ -1,5 +1,5 @@
 body {
-     background-image: url(images/system/background.png);
+     background-image: url('/worldcup/images/system/background.png');
      color: #CCCC99;
      font-family: DushaV5-Regular;
 }

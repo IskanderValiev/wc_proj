@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8">
     <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="worldcup/style.css">
     <style type="text/css">
         .information {
             background: clear;
@@ -89,7 +89,7 @@
 
     <div id="content">
         <div class="image">
-            <img src="images/system/null.jpg" width="200" height="200">
+            <img src="worldcup/images/system/null.jpg" width="200" height="200">
             <a href=""></a>
         </div>
 
@@ -121,7 +121,7 @@
     </div>
 
     <div id="footer">
-        <img src="images/system/sponsors.png">
+        <img src="worldcup/images/system/sponsors.png">
     </div>
 </div>
 </body>
