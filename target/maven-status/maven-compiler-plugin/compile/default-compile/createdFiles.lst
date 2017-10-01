@@ -1,5 +1,4 @@
 servlets/DispatcherServlet.class
-DataBase.class
 users/User$UserBuilder.class
 dao/UsersDao.class
 dao/UsersDaoJdbcImpl.class

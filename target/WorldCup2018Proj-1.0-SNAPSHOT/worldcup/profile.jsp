@@ -6,13 +6,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="dao.UsersDao" %>
+<%@ page import="dao.UsersDoaJdbcTemplateImpl" %>
+<%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
+<%@ page import="users.User" %>
+
 <%
-    String login = request.getParameter("login");
-    String name = request.getParameter("name") + " " + request.getParameter("lname");
-    String city = request.getParameter("city");
-    String gender = request.getParameter("gender");
-    String email = request.getParameter("email");
-    String bday = request.getParameter("bday") + " " + request.getParameter("bmon") + " " + request.getParameter("byear");
+    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+    dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
+    dataSource.setUsername("postgres");
+    dataSource.setPassword("BVB09");
+    UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
+
+    String login = request.getParameter("enterlogin");
+    String name = usersDao.getColumnByLogin("name", login);
+    String lastname = usersDao.getColumnByLogin("lastname", login);
+    String city = usersDao.getColumnByLogin("city", login);
+    String gender = usersDao.getColumnByLogin("gender", login);
+    String email = usersDao.getColumnByLogin("email", login);
+    String bday = usersDao.getColumnByLogin("bday", login);
+
+
+
 %>
 <!DOCTYPE html>
 <html>
@@ -64,16 +79,16 @@
                 <td><u>Menu:</u></td>
             </tr>
             <tr>
-                <td><a href="authorization.html">Profile</a></td>
+                <td><a href="/worldcup/profile.jsp">Profile</a></td>
             </tr>
             <tr>
-                <td><a href="homepage.html">Homepage</a></td>
+                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
             </tr>
             <tr>
-                <td><a href="matches.html">Matches</a></td>
+                <td><a href="/worldcup/matches.jsp">Matches</a></td>
             </tr>
             <tr>
-                <td><a href="cities.html">Cities</a></td>
+                <td><a href="/worldcup/cities.jsp">Cities</a></td>
             </tr>
             <tr>
                 <td><a href="staduims.html">Stadiums</a></td>
@@ -82,7 +97,10 @@
                 <td><a href=#>Galary</a></td>
             </tr>
             <tr>
-                <td><a href=#>Contacts</a></td>
+                <td><a href="/worldcup/contact.jsp">Contacts</a></td>
+            </tr>
+            <tr>
+                <td><a href="/worldcup/authorization.html">Exit</a></td>
             </tr>
         </table>
     </div>
@@ -96,7 +114,7 @@
         <div class="information">
             <table class="info">
                 <tr>
-                    <td><label><%=name%></label></td>
+                    <td><label><font size="28px"><%=name + " " + lastname%></font></label></td>
                 </tr>
                 <tr>
                     <td><hr></td>

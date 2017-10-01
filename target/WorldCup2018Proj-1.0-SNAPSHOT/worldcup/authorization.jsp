@@ -6,6 +6,28 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8;" language="java" %>
+<%
+
+    Cookie[] cookies = request.getCookies();
+
+    Cookie loginCookie = null;
+    for(int i = 0; i < cookies.length; i++) {
+        String cookieName = cookies[i].getName();
+        if (cookieName.equals("login")) {
+            loginCookie = cookies[i];
+            break;
+        }
+    }
+
+    Cookie passwordCookie = null;
+    for(int i = 0; i < cookies.length; i++) {
+        String cookieName = cookies[i].getName();
+        if (cookieName.equals("password")) {
+            passwordCookie = cookies[i];
+            break;
+        }
+    }
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -134,7 +156,7 @@
                     <td><label>Password:</label></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="enterlogin"></td>
+                    <td><input type="text" name="enterlogin"> </td>
                     <td><input type="password" name="enterpass"></td>
                     <td><input type="submit" name="signin" value="Sign In"></td>
                 </tr>
@@ -297,6 +319,7 @@
                     </tr>
 
                 </table>
+                <h2>You successfully registered. Please, input your login and password above to enter the site.</h2>
             </div>
         </form>
     </div>

@@ -80,4 +80,9 @@ public class UsersDaoJdbcImpl implements UsersDao {
     public String getPasswordByLogin(String login) {
         return null;
     }
+
+    @Override
+    public String getColumnByLogin(String columnName, String login) {
+        return null;
+    }
 }

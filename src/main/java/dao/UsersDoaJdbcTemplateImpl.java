@@ -102,4 +102,25 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
        return template.queryForObject(SQL_SELECT_PASSWORD_BY_LOGIN, new String[]{login}, String.class);
     }
 
+    @Override
+    public String getColumnByLogin(String columnName, String login) {
+        //language=SQL
+        String sql_select_column_by_login = "SELECT " + columnName + " FROM users WHERE login = ?";
+
+        return template.queryForObject(sql_select_column_by_login, new String[]{login}, String.class);
+    }
+
+//    public static void main(String[] args) {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
+//        dataSource.setUsername("postgres");
+//        dataSource.setPassword("BVB09");
+//        UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
+//
+//        System.out.println(usersDao.getColumnByLogin("name", "iskander") + " " + usersDao.getColumnByLogin("lastname", "iskander"));
+//        System.out.println(usersDao.getColumnByLogin("bday", "iskander"));
+//        System.out.println(usersDao.getColumnByLogin("gender", "iskander"));
+//        System.out.println(usersDao.getColumnByLogin("email", "iskander"));
+//        System.out.println(usersDao.getColumnByLogin("telephone", "iskander"));
+//    }
 }

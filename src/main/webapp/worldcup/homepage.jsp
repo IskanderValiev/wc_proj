@@ -26,16 +26,16 @@
                 <td><u>Menu:</u></td>
             </tr>
             <tr>
-                <td><a href="worldcup/profile.jsp">Profile</a></td>
+                <td><a href="/worldcup/profile.jsp">Profile</a></td>
             </tr>
             <tr>
-                <td><a href="homepage.html">Homepage</a></td>
+                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
             </tr>
             <tr>
-                <td><a href="matches.html">Matches</a></td>
+                <td><a href="/worldcup/matches.jsp">Matches</a></td>
             </tr>
             <tr>
-                <td><a href="cities.html">Cities</a></td>
+                <td><a href="/worldcup/cities.jsp">Cities</a></td>
             </tr>
             <tr>
                 <td><a href="staduims.html">Stadiums</a></td>
@@ -44,10 +44,10 @@
                 <td><a href=#>Galary</a></td>
             </tr>
             <tr>
-                <td><a href=#>Contacts</a></td>
+                <td><a href="/worldcup/contact.jsp">Contacts</a></td>
             </tr>
             <tr>
-                <td><a href="authorization.html">Exit</a></td>
+                <td><a href="/worldcup/authorization.html">Exit</a></td>
             </tr>
         </table>
     </div>

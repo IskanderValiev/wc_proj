@@ -1,16 +1,15 @@
 package servlets;
 
 import dao.UsersDao;
-import dao.UsersDaoJdbcImpl;
 import dao.UsersDoaJdbcTemplateImpl;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import users.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Statement;
 
 /**
  * Created by isko on 9/23/17.
@@ -29,7 +28,7 @@ public class AuthorizationServlet extends DispatcherServlet {
     private String enterLogin;
     private String enterPass;
 
-    private UsersDoaJdbcTemplateImpl usersDao;
+    private UsersDao usersDao;
 
     @Override
     public void init() throws ServletException {
@@ -52,7 +51,7 @@ public class AuthorizationServlet extends DispatcherServlet {
         name = req.getParameter("name");
         lastname = req.getParameter("lname");
         gender = req.getParameter("gender");
-        bday = req.getParameter("bday");
+        bday = req.getParameter("bday") + " " + req.getParameter("bmon") + " " + req.getParameter("byear");
         city = req.getParameter("city");
         email = req.getParameter("email");
         telephone = req.getParameter("phone");
@@ -76,12 +75,37 @@ public class AuthorizationServlet extends DispatcherServlet {
 
 
             usersDao.save(user);
-            super.forward("/worldcup/profile.jsp", req, resp);
+            super.forward("/worldcup/success.jsp", req, resp);
         } else {
             if (req.getParameter("signin") != null) {
-                System.out.println(enterLogin);
-                System.out.println(enterPass);
                 if (usersDao.getPasswordByLogin(enterLogin).equals(enterPass)) {
+//                    Cookie loginCookie = new Cookie("login", enterLogin);
+//                    loginCookie.setMaxAge(365*24*60*60);
+//                    resp.addCookie(loginCookie);
+//
+//                    Cookie passwordCookie = new Cookie("password", enterPass);
+//                    passwordCookie.setMaxAge(365*24*60*60);
+//                    resp.addCookie(passwordCookie);
+//
+//                    Cookie[] cookies = req.getCookies();
+//
+//                    Cookie loginCookie1 = null;
+//                    for(int i = 0; i < cookies.length; i++) {
+//                        String cookieName = cookies[i].getName();
+//                        if (cookieName.equals("login")) {
+//                            loginCookie1 = cookies[i];
+//                            break;
+//                        }
+//                    }
+//
+//                    Cookie passwordCookie1 = null;
+//                    for(int i = 0; i < cookies.length; i++) {
+//                        String cookieName = cookies[i].getName();
+//                        if (cookieName.equals("password")) {
+//                            passwordCookie1 = cookies[i];
+//                            break;
+//                        }
+//                    }
                     super.forward("/worldcup/profile.jsp", req, resp);
                 }
             }
