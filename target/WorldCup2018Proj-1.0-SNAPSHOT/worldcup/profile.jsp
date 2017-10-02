@@ -9,7 +9,7 @@
 <%@ page import="dao.UsersDao" %>
 <%@ page import="dao.UsersDoaJdbcTemplateImpl" %>
 <%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
-<%@ page import="users.User" %>
+
 
 <%
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -25,9 +25,6 @@
     String gender = usersDao.getColumnByLogin("gender", login);
     String email = usersDao.getColumnByLogin("email", login);
     String bday = usersDao.getColumnByLogin("bday", login);
-
-
-
 %>
 <!DOCTYPE html>
 <html>

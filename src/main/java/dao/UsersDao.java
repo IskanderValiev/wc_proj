@@ -1,6 +1,6 @@
 package dao;
 
-import users.User;
+import models.User;
 
 /**
  * Created by isko on 9/25/17.

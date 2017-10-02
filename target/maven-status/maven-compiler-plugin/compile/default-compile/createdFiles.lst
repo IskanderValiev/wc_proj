@@ -1,8 +1,9 @@
 servlets/DispatcherServlet.class
-users/User$UserBuilder.class
+models/User.class
 dao/UsersDao.class
 dao/UsersDaoJdbcImpl.class
 servlets/AuthorizationServlet.class
 dao/UsersDoaJdbcTemplateImpl.class
-users/User.class
+cookies/Cookies.class
+models/User$UserBuilder.class
 dao/CrudDao.class

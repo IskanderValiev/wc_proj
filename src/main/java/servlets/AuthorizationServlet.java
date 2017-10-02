@@ -1,9 +1,10 @@
 package servlets;
 
+import cookies.Cookies;
 import dao.UsersDao;
 import dao.UsersDoaJdbcTemplateImpl;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import users.User;
+import models.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -30,6 +31,8 @@ public class AuthorizationServlet extends DispatcherServlet {
 
     private UsersDao usersDao;
 
+    private Cookies cookies;
+
     @Override
     public void init() throws ServletException {
         try {
@@ -42,24 +45,24 @@ public class AuthorizationServlet extends DispatcherServlet {
         dataSource.setUsername("postgres");
         dataSource.setPassword("BVB09");
         usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
+
+        cookies = new Cookies();
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        login = req.getParameter("login");
-        password = req.getParameter("pass");
-        name = req.getParameter("name");
-        lastname = req.getParameter("lname");
-        gender = req.getParameter("gender");
-        bday = req.getParameter("bday") + " " + req.getParameter("bmon") + " " + req.getParameter("byear");
-        city = req.getParameter("city");
-        email = req.getParameter("email");
-        telephone = req.getParameter("phone");
-
-        enterLogin = req.getParameter("enterlogin");
-        enterPass = req.getParameter("enterpass");
 
         if (req.getParameter("signup") != null) {
+
+            login = req.getParameter("login");
+            password = req.getParameter("pass");
+            name = req.getParameter("name");
+            lastname = req.getParameter("lname");
+            gender = req.getParameter("gender");
+            bday = req.getParameter("bday") + " " + req.getParameter("bmon") + " " + req.getParameter("byear");
+            city = req.getParameter("city");
+            email = req.getParameter("email");
+            telephone = req.getParameter("phone");
 
             User user = User.builder()
                     .login(login)
@@ -73,42 +76,31 @@ public class AuthorizationServlet extends DispatcherServlet {
                     .email(email)
                     .build();
 
-
             usersDao.save(user);
             super.forward("/worldcup/success.jsp", req, resp);
         } else {
             if (req.getParameter("signin") != null) {
+
+                enterLogin = req.getParameter("enterlogin");
+                enterPass = req.getParameter("enterpass");
+
                 if (usersDao.getPasswordByLogin(enterLogin).equals(enterPass)) {
-//                    Cookie loginCookie = new Cookie("login", enterLogin);
-//                    loginCookie.setMaxAge(365*24*60*60);
-//                    resp.addCookie(loginCookie);
-//
-//                    Cookie passwordCookie = new Cookie("password", enterPass);
-//                    passwordCookie.setMaxAge(365*24*60*60);
-//                    resp.addCookie(passwordCookie);
-//
-//                    Cookie[] cookies = req.getCookies();
-//
-//                    Cookie loginCookie1 = null;
-//                    for(int i = 0; i < cookies.length; i++) {
-//                        String cookieName = cookies[i].getName();
-//                        if (cookieName.equals("login")) {
-//                            loginCookie1 = cookies[i];
-//                            break;
-//                        }
-//                    }
-//
-//                    Cookie passwordCookie1 = null;
-//                    for(int i = 0; i < cookies.length; i++) {
-//                        String cookieName = cookies[i].getName();
-//                        if (cookieName.equals("password")) {
-//                            passwordCookie1 = cookies[i];
-//                            break;
-//                        }
-//                    }
+                    cookies.addCookie("login", enterLogin, resp);
+                    cookies.addCookie("password", enterPass, resp);
+                    super.forward("/worldcup/profile.jsp", req, resp);
+                }
+            } else {
+                if (usersDao.getPasswordByLogin(cookies.getCookie("login", req).getValue()).equals(cookies.getCookie("password", req).getValue())) {
                     super.forward("/worldcup/profile.jsp", req, resp);
                 }
             }
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (usersDao.getPasswordByLogin(cookies.getCookie("login", req).getValue()).equals(cookies.getCookie("password", req).getValue())) {
+            super.forward("/worldcup/profile.jsp", req, resp);
         }
     }
 }
