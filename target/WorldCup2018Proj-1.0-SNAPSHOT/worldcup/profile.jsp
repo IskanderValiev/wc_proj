@@ -18,20 +18,38 @@
     dataSource.setPassword("BVB09");
     UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
 
-    String login = request.getParameter("enterlogin");
+    String cookieName = "loginCookie";
+    Cookie cookie = null;
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (int i = 0; i < cookies.length; i++) {
+            String name = cookies[i].getName();
+            if (name.equals(cookieName)) {
+                cookie = cookies[i];
+                break;
+            }
+        }
+    }
+
+    String login = cookie.getValue();
+    System.out.println(login);
+
+
     String name = usersDao.getColumnByLogin("name", login);
     String lastname = usersDao.getColumnByLogin("lastname", login);
     String city = usersDao.getColumnByLogin("city", login);
     String gender = usersDao.getColumnByLogin("gender", login);
     String email = usersDao.getColumnByLogin("email", login);
     String bday = usersDao.getColumnByLogin("bday", login);
+
+
 %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="worldcup/style.css">
+    <link rel="stylesheet" type="text/css" href="/worldcup/style.css">
     <style type="text/css">
         .information {
             background: clear;
@@ -104,7 +122,7 @@
 
     <div id="content">
         <div class="image">
-            <img src="worldcup/images/system/null.jpg" width="200" height="200">
+            <img src="/worldcup/images/system/null.jpg" width="200" height="200">
             <a href=""></a>
         </div>
 
@@ -136,8 +154,12 @@
     </div>
 
     <div id="footer">
-        <img src="worldcup/images/system/sponsors.png">
+        <img src="/worldcup/images/system/sponsors.png" usemap="#mymap">
     </div>
+
+    <map name="mymap">
+        <area shape="rect" coords="1.06,4.00,5.82,5.80" href="http://adidas.com/">
+    </map>
 </div>
 </body>
 </html>

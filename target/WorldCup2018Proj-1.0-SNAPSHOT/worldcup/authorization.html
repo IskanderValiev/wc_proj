@@ -150,44 +150,44 @@
 						<col width="70%" align="center">
 						<tr>
 							<td><label for="login">Login<sup>•</sup></label></td>
-							<td><input type="text" name="login"></td>
+							<td><input type="text" id="login" name="login"></td>
 						</tr>
 
 						<tr>
 							<td><label for="pass">Password<sup>•</sup></label></td>
-							<td><input type="password" name="pass"></td>
+							<td><input type="password" id="pass" name="pass"></td>
 						</tr>
 
 						<tr>
 							<td><label for="confirm">Confirm password<sup>•</sup></label></td>
-							<td><input type="password" name="cpassword"></td>
+							<td><input type="password" id="confirm" name="cpassword"></td>
 						</tr>
 
 						<tr>
 							<td><label for="name">Name<sup>•</sup></label></td>
-							<td><input type="text" name="name"></td>
+							<td><input type="text" id="name" name="name"></td>
 						</tr>
 
 						<tr>
 							<td><label for="lname">Lastname<sup>•</sup></label></td>
-							<td><input type="text" name="lname"></td>
+							<td><input type="text" id="lname" name="lname"></td>
 						</tr>
 
 						<tr>
 							<td><label for="email">E-Mail<sup>•</sup></label></td>
-							<td><input type="email" name="email"></td>
+							<td><input type="email" id="email" name="email"></td>
 						</tr>
 
                         <tr>
                             <td><label for="phone">Telephone<sup>•</sup></label></td>
-                            <td><input type="text" name="phone"></td>
+                            <td><input type="text" id="phone" name="phone"></td>
                         </tr>
 
 						<tr>
 						
 							<td><label for="city">City<sup>•</sup></label></td>
 							<td>
-								<select name="city">
+								<select id="city" name="city">
 									<option disabled>Chose city</option>
 									<option name="city" value="Kazan">Kazan</option>
 									<option name="city" value="Moscow">Moscow</option>
@@ -206,9 +206,9 @@
 						<tr>
 							<td><label for="gender">Gender<sup>•</sup></label></td>
 							<td>
-								<input type="radio" id="male" name="gender" value="Male">
+								<input type="radio" id="gender" name="gender" value="Male">
 								<label for="gen">Male</label>
-								<input type="radio" id="female" name="gender" value="Female">
+								<input type="radio" id="gender" name="gender" value="Female">
 								<label for="gen">Female</label>
 							</td>
 						</tr>
@@ -216,7 +216,7 @@
 						<tr>
 							<td><label for="birthday">Birthday<sup>•</sup></label></td>
 							<td>
-								<select name="bday">
+								<select id="birthday" name="bday">
 									<option value="0" disabled>Day</option>
 									<option name="bday" value="1">1</option>
 									<option name="bday" value="2">2</option>
@@ -313,7 +313,7 @@
 
 					</table>
 
-                    <h2><sup>•</sup> - <strong>fields are required!</strong></h2>
+                    <h2><sup>•</sup> - <strong>required fields!</strong></h2>
 
 				</div>
 			</form>

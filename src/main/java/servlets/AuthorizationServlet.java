@@ -2,14 +2,18 @@ package servlets;
 
 import cookies.Cookies;
 import dao.UsersDao;
+import dao.UsersDaoJdbcImpl;
 import dao.UsersDoaJdbcTemplateImpl;
+import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import models.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletConfig;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.applet.Applet;
 import java.io.IOException;
 
 /**
@@ -31,22 +35,25 @@ public class AuthorizationServlet extends DispatcherServlet {
 
     private UsersDao usersDao;
 
-    private Cookies cookies;
+//    @Override
+//    public void init(ServletConfig config) throws ServletException {
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//        } catch (ClassNotFoundException e) {
+//            throw new IllegalArgumentException(e);
+//        }
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
+//        dataSource.setUsername("postgres");
+//        dataSource.setPassword("BVB09");
+//        usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
+//    }
 
     @Override
-    public void init() throws ServletException {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new IllegalArgumentException(e);
-        }
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("BVB09");
-        usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
-
-        cookies = new Cookies();
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        ApplicationContext context = (ApplicationContext)config.getServletContext().getAttribute("context");
+        usersDao = (UsersDao) context.getBean("usersDao");
     }
 
     @Override
@@ -80,27 +87,21 @@ public class AuthorizationServlet extends DispatcherServlet {
             super.forward("/worldcup/success.jsp", req, resp);
         } else {
             if (req.getParameter("signin") != null) {
-
                 enterLogin = req.getParameter("enterlogin");
                 enterPass = req.getParameter("enterpass");
-
                 if (usersDao.getPasswordByLogin(enterLogin).equals(enterPass)) {
-                    cookies.addCookie("login", enterLogin, resp);
-                    cookies.addCookie("password", enterPass, resp);
-                    super.forward("/worldcup/profile.jsp", req, resp);
-                }
-            } else {
-                if (usersDao.getPasswordByLogin(cookies.getCookie("login", req).getValue()).equals(cookies.getCookie("password", req).getValue())) {
+//                    Cookies login = new Cookies();
+//                    login.addCookie("login", enterLogin, resp);
+//                    String loginValue = login.getCookie("login", req).getValue();
+//                    req.setAttribute("loginCookie", loginValue);
+
+                    Cookie login = new Cookie("loginCookie", enterLogin);
+                    login.setMaxAge(60*60);
+                    resp.addCookie(login);
+
                     super.forward("/worldcup/profile.jsp", req, resp);
                 }
             }
-        }
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (usersDao.getPasswordByLogin(cookies.getCookie("login", req).getValue()).equals(cookies.getCookie("password", req).getValue())) {
-            super.forward("/worldcup/profile.jsp", req, resp);
         }
     }
 }
