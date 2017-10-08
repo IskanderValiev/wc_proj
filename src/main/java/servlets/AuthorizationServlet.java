@@ -4,6 +4,8 @@ import cookies.Cookies;
 import dao.UsersDao;
 import dao.UsersDaoJdbcImpl;
 import dao.UsersDoaJdbcTemplateImpl;
+import exceptions.DbException;
+import exceptions.DuplicateEntryException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import models.User;
@@ -63,6 +65,7 @@ public class AuthorizationServlet extends DispatcherServlet {
 
             login = req.getParameter("login");
             password = req.getParameter("pass");
+            String cpassword = req.getParameter("cpassword");
             name = req.getParameter("name");
             lastname = req.getParameter("lname");
             gender = req.getParameter("gender");
@@ -71,20 +74,43 @@ public class AuthorizationServlet extends DispatcherServlet {
             email = req.getParameter("email");
             telephone = req.getParameter("phone");
 
-            User user = User.builder()
-                    .login(login)
-                    .password(password)
-                    .name(name)
-                    .lastname(lastname)
-                    .gender(gender)
-                    .bday(bday)
-                    .city(city)
-                    .telephone(telephone)
-                    .email(email)
-                    .build();
+            if (    login != null &&
+                    password != null &&
+                    password.equals(cpassword) &&
+                    name != null &&
+                    lastname != null &&
+                    gender != null &&
+                    bday != null &&
+                    city != null &&
+                    email != null &&
+                    telephone != null
+                    ) {
+//                try {
+                    User user = User.builder()
+                            .login(login)
+                            .password(password)
+                            .name(name)
+                            .lastname(lastname)
+                            .gender(gender)
+                            .bday(bday)
+                            .city(city)
+                            .telephone(telephone)
+                            .email(email)
+                            .build();
 
-            usersDao.save(user);
-            super.forward("/worldcup/success.jsp", req, resp);
+                    usersDao.save(user);
+                    super.forward("/worldcup/success.jsp", req, resp);
+                    return;
+//                } catch (DbException ex) {
+//                    req.setAttribute("message", "Error with DB was occured.");
+//                }
+//                catch (DuplicateEntryException ex) {
+//                    req.setAttribute("message", "User with such login already exists.");
+//                }
+            } else {
+                super.forward("/worldcup/authorization.jsp", req, resp);
+                req.setAttribute("message", "You have to fill all fields.");
+            }
         } else {
             if (req.getParameter("signin") != null) {
                 enterLogin = req.getParameter("enterlogin");

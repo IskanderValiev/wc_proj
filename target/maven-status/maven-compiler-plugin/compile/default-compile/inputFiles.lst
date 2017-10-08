@@ -2,8 +2,10 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/listeners/ServletListener.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/models/User.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/UsersDao.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/exceptions/DuplicateEntryException.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/servlets/AuthorizationServlet.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/UsersDoaJdbcTemplateImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/UsersDaoJdbcImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/servlets/DispatcherServlet.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/CrudDao.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/exceptions/DbException.java

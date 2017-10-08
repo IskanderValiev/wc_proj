@@ -97,7 +97,7 @@
                 <td><a href="/worldcup/profile.jsp">Profile</a></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
+                <td><a href="/worldcup/homepage/index.html">Homepage</a></td>
             </tr>
             <tr>
                 <td><a href="/worldcup/matches.jsp">Matches</a></td>

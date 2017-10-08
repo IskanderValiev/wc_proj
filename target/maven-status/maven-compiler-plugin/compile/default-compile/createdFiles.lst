@@ -1,10 +1,12 @@
 servlets/DispatcherServlet.class
 models/User.class
+cookies/Cookies.class
+exceptions/DuplicateEntryException.class
+dao/CrudDao.class
 dao/UsersDao.class
 dao/UsersDaoJdbcImpl.class
 servlets/AuthorizationServlet.class
 dao/UsersDoaJdbcTemplateImpl.class
-cookies/Cookies.class
 models/User$UserBuilder.class
-dao/CrudDao.class
+exceptions/DbException.class
 listeners/ServletListener.class

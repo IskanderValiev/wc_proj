@@ -35,7 +35,7 @@
                 <td><a href="/worldcup/matches.jsp">Matches</a></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/cities.jsp">Cities</a></td>
+                <td><a href="/worldcup/cities.js">Cities</a></td>
             </tr>
             <tr>
                 <td><a href="staduims.html">Stadiums</a></td>
