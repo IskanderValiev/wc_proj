@@ -9,13 +9,13 @@
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>authorizationServlet</servlet-name>
-        <servlet-class>servlets.AuthorizationServlet</servlet-class>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>authorizationServlet</servlet-name>
-        <url-pattern>/profile</url-pattern>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <listener>

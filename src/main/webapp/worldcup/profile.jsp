@@ -5,43 +5,34 @@
   Time: 2:57 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="dao.UsersDao" %>
 <%@ page import="dao.UsersDoaJdbcTemplateImpl" %>
 <%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
+<%@ page import="cookies.Cookies" %>
+<%@ page import="cookies.CookiesImpl" %>
 
 
 <%
-    DriverManagerDataSource dataSource = new DriverManagerDataSource();
-    dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
-    dataSource.setUsername("postgres");
-    dataSource.setPassword("BVB09");
-    UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
-
-    String cookieName = "loginCookie";
-    Cookie cookie = null;
-    Cookie[] cookies = request.getCookies();
-    if (cookies != null) {
-        for (int i = 0; i < cookies.length; i++) {
-            String name = cookies[i].getName();
-            if (name.equals(cookieName)) {
-                cookie = cookies[i];
-                break;
-            }
-        }
-    }
-
-    String login = cookie.getValue();
-    System.out.println(login);
-
-
-    String name = usersDao.getColumnByLogin("name", login);
-    String lastname = usersDao.getColumnByLogin("lastname", login);
-    String city = usersDao.getColumnByLogin("city", login);
-    String gender = usersDao.getColumnByLogin("gender", login);
-    String email = usersDao.getColumnByLogin("email", login);
-    String bday = usersDao.getColumnByLogin("bday", login);
-
+//    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//    dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
+//    dataSource.setUsername("postgres");
+//    dataSource.setPassword("BVB09");
+//    UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
+//
+//    Cookies cookies = new CookiesImpl();
+//
+//    String login = cookies.getCookie("login", request).getValue();
+//    System.out.println(login);
+//
+//
+//    String name = usersDao.getColumnByLogin("name", login);
+//    String lastname = usersDao.getColumnByLogin("lastname", login);
+//    String city = usersDao.getColumnByLogin("city", login);
+//    String gender = usersDao.getColumnByLogin("gender", login);
+//    String email = usersDao.getColumnByLogin("email", login);
+//    String bday = usersDao.getColumnByLogin("bday", login);
 
 %>
 <!DOCTYPE html>
@@ -82,7 +73,7 @@
         <span style="vertical-align: -22px">Profile</span>
         <table class="userlogin">
             <tr>
-                <td>Welcome, <%=login%></td>
+                <td>Welcome, ${login}</td>
             </tr>
         </table>
     </div>
@@ -94,10 +85,10 @@
                 <td><u>Menu:</u></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/profile.jsp">Profile</a></td>
+                <td><a href="/profile">Profile</a></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/homepage/index.html">Homepage</a></td>
+                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
             </tr>
             <tr>
                 <td><a href="/worldcup/matches.jsp">Matches</a></td>
@@ -109,7 +100,7 @@
                 <td><a href="staduims.html">Stadiums</a></td>
             </tr>
             <tr>
-                <td><a href=#>Galary</a></td>
+                <td><a href="/worldcup/galary/galary.html">Galary</a></td>
             </tr>
             <tr>
                 <td><a href="/worldcup/contact.jsp">Contacts</a></td>
@@ -129,22 +120,22 @@
         <div class="information">
             <table class="info">
                 <tr>
-                    <td><label><font size="28px"><%=name + " " + lastname%></font></label></td>
+                    <td><label><font size="25px">${name}</font></label></td>
                 </tr>
                 <tr>
                     <td><hr></td>
                 </tr>
                 <tr>
-                    <td><label>Bday: <%=bday%></label></td>
+                    <td><label>Bday: ${bday}</label></td>
                 </tr>
                 <tr>
-                    <td><label>City: <%=city%></label></td>
+                    <td><label>City: ${city}</label></td>
                 </tr>
                 <tr>
-                    <td><label>Gender: <%=gender%></label></td>
+                    <td><label>Gender: ${gender}</label></td>
                 </tr>
                 <tr>
-                    <td><label>E-mail: <%=email%></label></td>
+                    <td><label>E-mail: ${email}</label></td>
                 </tr>
                 <tr>
                     <td><label>Instagram:</label></td>

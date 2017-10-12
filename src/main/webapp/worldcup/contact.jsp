@@ -57,7 +57,7 @@
                 <td><u>Menu:</u></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/profile.jsp">Profile</a></td>
+                <td><a href="/profile">Profile</a></td>
             </tr>
             <tr>
                 <td><a href="/worldcup/homepage.jsp">Homepage</a></td>

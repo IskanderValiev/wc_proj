@@ -9,5 +9,6 @@ $('.sl').slick({
     arrows: false,
     fade: true,
     speed: 1500,
-    apdativeHeight: false
+    apdativeHeight: false,
+    waitForAnimate: false
 });
