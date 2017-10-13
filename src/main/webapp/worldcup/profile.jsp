@@ -7,8 +7,8 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="dao.UsersDao" %>
-<%@ page import="dao.UsersDoaJdbcTemplateImpl" %>
+<%@ page import="dao.usersdao.UsersDao" %>
+<%@ page import="dao.usersdao.UsersDoaJdbcTemplateImpl" %>
 <%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
 <%@ page import="cookies.Cookies" %>
 <%@ page import="cookies.CookiesImpl" %>
@@ -73,7 +73,7 @@
         <span style="vertical-align: -22px">Profile</span>
         <table class="userlogin">
             <tr>
-                <td>Welcome, ${login}</td>
+                <td>Hello, ${login}</td>
             </tr>
         </table>
     </div>
@@ -100,7 +100,7 @@
                 <td><a href="staduims.html">Stadiums</a></td>
             </tr>
             <tr>
-                <td><a href="/worldcup/galary/galary.html">Galary</a></td>
+                <td><a href="/worldcup/galary.jsp">Galary</a></td>
             </tr>
             <tr>
                 <td><a href="/worldcup/contact.jsp">Contacts</a></td>

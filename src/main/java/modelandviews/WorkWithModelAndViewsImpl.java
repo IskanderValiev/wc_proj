@@ -4,7 +4,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
     @Override
-    public ModelAndView addObject(String login,
+    public ModelAndView showUsersFields(String login,
                           String name,
                           String gender,
                           String bday,
@@ -22,6 +22,14 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
         modelAndView.addObject("telephone", telephone);
         modelAndView.addObject("email", email);
         modelAndView.setViewName(view);
+        return modelAndView;
+    }
+
+    @Override
+    public ModelAndView throwException(String message, String viewName) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("message", message);
+        modelAndView.setViewName(viewName);
         return modelAndView;
     }
 }

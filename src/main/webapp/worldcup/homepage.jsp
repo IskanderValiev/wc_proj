@@ -46,7 +46,17 @@
                       </ul>
                   </li>
                   <li><a href="#">Stadiums</a></li>
-                  <li><a href="/worldcup/galary/galary.html">Galary</a></li>
+                  <li><a href="#">Teams</a>
+                      <ul>
+                          <li><a href="#">Europe</a></li>
+                          <li><a href="#">South America</a></li>
+                          <li><a href="#">Asia</a></li>
+                          <li><a href="#">North and Central America</a></li>
+                          <li><a href="#">Africa</a></li>
+                          <li><a href="#">Oceania</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/worldcup/galary.jsp">Galary</a></li>
                   <li><a href="/worldcup/contact.jsp">Contacts</a></li>
               </ul>
           </div>

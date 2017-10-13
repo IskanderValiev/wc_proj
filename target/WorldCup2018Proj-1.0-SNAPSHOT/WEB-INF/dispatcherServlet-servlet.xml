@@ -9,6 +9,7 @@
     <mvc:default-servlet-handler/>
     <context:annotation-config />
     <context:component-scan base-package="controllers"/>
+    <mvc:view-controller path="/" view-name="authorization"/>
 
     <!--<bean id="/profile" class="controllers.UsersController">-->
         <!--<constructor-arg name="usersService" ref="usersService" />-->

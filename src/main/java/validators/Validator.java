@@ -2,8 +2,8 @@ package validators;
 
 public class Validator {
 
-    public static boolean isCorrect(String login, String password, String name,
-                                    String lastname, String cpassword, String gender,
+    public static boolean isCorrect(String login, String password, String cpassword,
+                                    String name, String lastname,  String gender,
                                     String city, String bday, String telephone, String email) {
 
         return login != null &&

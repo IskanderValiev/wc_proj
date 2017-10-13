@@ -6,6 +6,8 @@ cookies/Cookies.class
 modelandviews/WorkWithModelAndViews.class
 dao/CrudDao.class
 modelandviews/WorkWithModelAndViewsImpl.class
+models/Player.class
+models/Player$PlayerBuilder.class
 controllers/UsersController.class
 dao/UsersDao.class
 dao/UsersDaoJdbcImpl.class
@@ -14,5 +16,6 @@ dao/UsersDoaJdbcTemplateImpl.class
 cookies/CookiesImpl.class
 sessions/Sessions.class
 models/User$UserBuilder.class
+dao/PlayersDao.class
 exceptions/DbException.class
 listeners/ServletListener.class

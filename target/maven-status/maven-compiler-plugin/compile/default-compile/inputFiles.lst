@@ -2,6 +2,7 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/listeners/ServletListener.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/modelandviews/WorkWithModelAndViewsImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/services/UsersService.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/PlayersDao.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/CrudDao.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/exceptions/DbException.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/modelandviews/WorkWithModelAndViews.java
@@ -15,3 +16,4 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/UsersController.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/UsersDoaJdbcTemplateImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/UsersDaoJdbcImpl.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/models/Player.java

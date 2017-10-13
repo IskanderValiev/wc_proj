@@ -1,6 +1,6 @@
 package services;
 
-import dao.UsersDao;
+import dao.usersdao.UsersDao;
 import lombok.AllArgsConstructor;
 import models.User;
 
