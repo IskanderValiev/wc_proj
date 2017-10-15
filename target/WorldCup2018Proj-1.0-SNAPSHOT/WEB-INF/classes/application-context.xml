@@ -10,7 +10,15 @@
         <property name="password" value="BVB09"/>
     </bean>
 
-    <bean name="usersDao" id="usersDao" class="dao.UsersDoaJdbcTemplateImpl">
+    <bean name="usersDao" id="usersDao" class="dao.usersdao.UsersDoaJdbcTemplateImpl">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean name="countriesDao" id="countriesDao" class="dao.countriesdao.CountriesDaoJdbcTemplateImpl">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean name="playersDao" id="playersDao" class="dao.playersdao.PlayersDaoJdbcTemplateImpl">
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 </beans>

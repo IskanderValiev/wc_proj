@@ -16,7 +16,7 @@
         body {
             background-image: url('worldcup/images/system/background.png');
             font-family: DushaV5-Regular;
-            color: #CCCC99;
+            color: #ffffff;
         }
 
         .header {
@@ -191,7 +191,6 @@
                         <td><label for="phone">Telephone<sup>•</sup></label></td>
                         <td><input type="text" id="phone" name="phone"></td>
                     </tr>
-
                     <tr>
 
                         <td><label for="city">City<sup>•</sup></label></td>
@@ -216,9 +215,9 @@
                         <td><label for="gender">Gender<sup>•</sup></label></td>
                         <td>
                             <input type="radio" id="gender" name="gender" value="Male">
-                            <label for="gen">Male</label>
+                            <label for="gender">Male</label>
                             <input type="radio" id="gender" name="gender" value="Female">
-                            <label for="gen">Female</label>
+                            <label for="gender">Female</label>
                         </td>
                     </tr>
 
@@ -321,9 +320,8 @@
                     </tr>
 
                 </table>
-
                 <h2><sup>•</sup> - <strong>required fields!</strong></h2>
-
+                ${message}
             </div>
         </form>
     </div>

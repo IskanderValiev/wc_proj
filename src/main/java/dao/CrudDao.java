@@ -14,8 +14,4 @@ public interface CrudDao<M, I> {
     void delete(I id);
 
     void update(M model);
-
-    String getPasswordByLogin(String login);
-
-    String getColumnByLogin(String columnName, String login);
 }

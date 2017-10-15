@@ -18,19 +18,15 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
 
     //language=SQL
     private static final String SQL_INSERT_PLAYER =
-            "INSERT INTO players (player_number, player_position, player_name, player_lastname, player_age, player_club, player_country) VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-    //language=SQL
-    private static final String SQL_SELECT_PLAYER_BY_LOGIN =
-            "SELECT * FROM players WHERE login = ?";
+            "INSERT INTO players (player_number, player_position, player_name, player_lastname, player_age, player_club, player_country) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
     //language=SQL
     private static final String SQL_SELECT_ALL_BY_CLUB =
-            "SELECT * FROM players WHERE club = :club";
+            "SELECT * FROM players WHERE player_club = ?;";
 
     //language=SQL
-    private static final String SQL_SELECT_PASSWORD_BY_LOGIN =
-            "SELECT password FROM users WHERE login = ?";
+    private static final String SQL_SELECT_ALL_BY_COUNTRY =
+            "SELECT * FROM players WHERE player_country = ?;";
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -65,7 +61,7 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
     @Override
     public List<Player> findAllByClub(String club) {
         Map<String, Object> params = new HashMap<>();
-        params.put("club", club);
+        params.put("player_club", club);
         return namedParameterTemplate.query(SQL_SELECT_ALL_BY_CLUB,
                 params, playerRowMapper);
     }
@@ -92,9 +88,7 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
 
     @Override
     public Player find(String login) {
-        Player player = template.query(SQL_SELECT_PLAYER_BY_LOGIN, new String[]{login}, playerRowMapper).get(0);
-        players.clear();
-        return player;
+        return null;
     }
 
     @Override
@@ -106,13 +100,10 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
     }
 
     @Override
-    public String getPasswordByLogin(String login) {
-        return template.queryForObject(SQL_SELECT_PASSWORD_BY_LOGIN, new String[]{login}, String.class);
-    }
-
-    @Override
-    public String getColumnByLogin(String columnName, String login) {
-        String sql_select_column_by_login = "SELECT " + columnName + " FROM players WHERE login = ?";
-        return template.queryForObject(sql_select_column_by_login, new String[]{login}, String.class);
+    public List<Player> findAllByCountry(String country) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("player_country", country);
+        return namedParameterTemplate.query(SQL_SELECT_ALL_BY_CLUB,
+                params, playerRowMapper);
     }
 }

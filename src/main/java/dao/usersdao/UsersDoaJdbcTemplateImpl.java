@@ -102,8 +102,16 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     @Override
     public String getColumnByLogin(String columnName, String login) {
         //language=SQL
-        String sql_select_column_by_login = "SELECT " + columnName + " FROM players WHERE login = ?";
+        String sql_select_column_by_login = "SELECT " + columnName + " FROM users WHERE login = ?";
 
         return template.queryForObject(sql_select_column_by_login, new String[]{login}, String.class);
+    }
+
+    @Override
+    public String getLoginByEmail(String email) {
+        //language=SQL
+        String sql_select_login_by_password = "SELECT login FROM users WHERE email = ?";
+        return template.queryForObject(sql_select_login_by_password, new String[]{email}, String.class);
+
     }
 }

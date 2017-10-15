@@ -7,8 +7,8 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="dao.UsersDao" %>
-<%@ page import="dao.UsersDoaJdbcTemplateImpl" %>
+<%@ page import="dao.usersdao.UsersDao" %>
+<%@ page import="dao.usersdao.UsersDoaJdbcTemplateImpl" %>
 <%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
 <%@ page import="cookies.Cookies" %>
 <%@ page import="cookies.CookiesImpl" %>

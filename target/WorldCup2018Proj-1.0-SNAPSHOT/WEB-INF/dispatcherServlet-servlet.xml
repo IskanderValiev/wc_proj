@@ -9,23 +9,37 @@
     <mvc:default-servlet-handler/>
     <context:annotation-config />
     <context:component-scan base-package="controllers"/>
-    <mvc:view-controller path="/" view-name="authorization"/>
-
-    <!--<bean id="/profile" class="controllers.UsersController">-->
-        <!--<constructor-arg name="usersService" ref="usersService" />-->
-    <!--</bean>-->
+    <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/profile" view-name="profile"/>
+    <mvc:view-controller path="/teams" view-name="teams"/>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/worldcup/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <bean id="usersService" class="services.UsersServiceImpl">
+    <bean id="usersService" class="services.usersservices.UsersServiceImpl">
         <constructor-arg name="usersDao" ref="usersDao" />
     </bean>
 
-    <bean id="usersDao" class="dao.UsersDoaJdbcTemplateImpl">
+    <bean id="usersDao" class="dao.usersdao.UsersDoaJdbcTemplateImpl">
         <constructor-arg name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="countriesService" class="services.countriesservices.CountryServiceImpl">
+        <constructor-arg name="countriesDao" ref="countriesDao"/>
+    </bean>
+
+    <bean name="countriesDao" id="countriesDao" class="dao.countriesdao.CountriesDaoJdbcTemplateImpl">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="playersService" class="services.playersservices.PlayersServiceImpl">
+        <constructor-arg name="playersDao" ref="playersDao"/>
+    </bean>
+
+    <bean name="playersDao" id="playersDao" class="dao.playersdao.PlayersDaoJdbcTemplateImpl">
+        <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -34,4 +48,5 @@
         <property name="password" value="BVB09" />
         <property name="url" value="jdbc:postgresql://localhost:5432/wc_proj_users" />
     </bean>
+
 </beans>

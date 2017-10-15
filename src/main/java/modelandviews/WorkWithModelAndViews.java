@@ -1,10 +1,13 @@
 package modelandviews;
 
+import models.Country;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 public interface WorkWithModelAndViews {
 
-    ModelAndView showUsersFields(String login,
+    ModelAndView showUsersData(String login,
                            String name,
                            String gender,
                            String bday,
@@ -14,4 +17,6 @@ public interface WorkWithModelAndViews {
                            String viewName);
 
     ModelAndView throwException(String message, String viewName);
+
+    ModelAndView showAllTeams(List<Country> countryList, String viewName);
 }

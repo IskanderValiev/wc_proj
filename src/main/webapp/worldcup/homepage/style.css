@@ -242,6 +242,49 @@ hr {
     -webkit-transform: scale(1.05);
 }
 
+/*Teams style*/
+.content {
+    width: 90%;
+    background-color: #CCCC99;
+    margin: auto;
+    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.5);
+}
+
+.team {
+    position: relative;
+    width: 35%;
+    height: 275px;
+    margin: 50px 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: rgba(180, 180, 180, 1);
+    padding: 5px;
+    float: left;
+}
+.team img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 5px;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.team img:hover {
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+.team_name {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
 /*Адаптивность картинок и видео*/
 img{
   max-width: 100%;

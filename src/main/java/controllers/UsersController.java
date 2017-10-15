@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import services.UsersService;
+import services.countriesservices.CountryService;
+import services.countriesservices.CountryServiceImpl;
+import services.usersservices.UsersService;
 import sessions.Sessions;
 import sessions.SessionsImpl;
 import validators.Validator;
@@ -29,7 +31,7 @@ public class UsersController {
 
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public ModelAndView openPage(HttpServletRequest request) {
-        ModelAndView modelAndView = new ModelAndView();
+        ModelAndView modelAndView;
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         Cookies cookies = new CookiesImpl();
         String login = cookies.getCookie("login", request).getValue();
@@ -39,7 +41,7 @@ public class UsersController {
         String city = usersService.getParameterByLogin("city", login);
         String telephone = usersService.getParameterByLogin("telephone", login);
         String email = usersService.getParameterByLogin("email", login);
-        modelAndView = workWithModelAndViews.showUsersFields(login, name, gender, bday, city, telephone, email, "profile");
+        modelAndView = workWithModelAndViews.showUsersData(login, name, gender, bday, city, telephone, email, "profile");
         return modelAndView;
     }
 
@@ -54,8 +56,10 @@ public class UsersController {
 
             String enterlogin = request.getParameter("enterlogin");
             String enterpassword = request.getParameter("enterpass");
+            String email = usersService.getParameterByLogin("email", enterlogin);
 
-            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin))) {
+            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin)) &&
+                    enterlogin.equals(usersService.getLoginByEmail(email))) {
 
                 Cookies cookies = new CookiesImpl();
                 cookies.addCookie("login", enterlogin, response, 20*60);
@@ -63,15 +67,14 @@ public class UsersController {
                 Sessions sessions = new SessionsImpl();
                 sessions.addSession("login", enterlogin, request);
 
-                String login = cookies.getCookie("login", request).getValue();
-                String name = usersService.getParameterByLogin("name", login) + " " + usersService.getParameterByLogin("lastname", login);
-                String gender = usersService.getParameterByLogin("gender", login);
-                String bday = usersService.getParameterByLogin("bday", login);
-                String city = usersService.getParameterByLogin("city", login);
-                String telephone = usersService.getParameterByLogin("telephone", login);
-                String email = usersService.getParameterByLogin("email", login);
+                String name = usersService.getParameterByLogin("name", enterlogin) + " " + usersService.getParameterByLogin("lastname", enterlogin);
+                String gender = usersService.getParameterByLogin("gender", enterlogin);
+                String bday = usersService.getParameterByLogin("bday", enterlogin);
+                String city = usersService.getParameterByLogin("city", enterlogin);
+                String telephone = usersService.getParameterByLogin("telephone", enterlogin);
 
-                modelAndView = workWithModelAndViews.showUsersFields(login, name, gender, bday, city, telephone, email, "profile");
+                modelAndView = workWithModelAndViews.showUsersData(enterlogin, name, gender, bday, city, telephone, email, "profile");
+                modelAndView.setViewName("redirect:/profile");
             } else {
                 modelAndView = workWithModelAndViews.throwException("Login or password is incorrect.", "index");
             }
@@ -84,6 +87,7 @@ public class UsersController {
         ModelAndView modelAndView = new ModelAndView();
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         if (signup != null) {
+
             String login = request.getParameter("login");
             String password = request.getParameter("pass");
             String cpassword = request.getParameter("cpassword");
