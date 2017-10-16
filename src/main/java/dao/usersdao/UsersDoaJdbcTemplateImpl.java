@@ -26,6 +26,14 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     //language=SQL
     private static final String SQL_SELECT_PASSWORD_BY_LOGIN = "SELECT password FROM users WHERE login = ?";
 
+    //language=SQL
+    private static final String SQL_CHECKING_USER_EXISTENCE =
+            "SELECT id FROM users WHERE login = ?;";
+
+    //language=SQL
+    private static final String SQL_CHECKING_EMAIL_EXISTANCE =
+            "SELECT id FROM users WHERE email = ?;";
+
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
 
@@ -113,5 +121,17 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
         String sql_select_login_by_password = "SELECT login FROM users WHERE email = ?";
         return template.queryForObject(sql_select_login_by_password, new String[]{email}, String.class);
 
+    }
+
+    @Override
+    public boolean exists(String login) {
+        Long id = template.queryForObject(SQL_CHECKING_USER_EXISTENCE, Long.class);
+        return id != null;
+    }
+
+    @Override
+    public boolean existingEmail(String email) {
+        Long id = template.queryForObject(SQL_CHECKING_EMAIL_EXISTANCE, Long.class);
+        return id != null;
     }
 }

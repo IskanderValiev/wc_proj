@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import services.countriesservices.CountryService;
-import services.countriesservices.CountryServiceImpl;
 import services.usersservices.UsersService;
 import sessions.Sessions;
 import sessions.SessionsImpl;
@@ -62,10 +60,14 @@ public class UsersController {
                     enterlogin.equals(usersService.getLoginByEmail(email))) {
 
                 Cookies cookies = new CookiesImpl();
-                cookies.addCookie("login", enterlogin, response, 20*60);
+                cookies.addCookie("login", enterlogin, response, 60*60);
 
-                Sessions sessions = new SessionsImpl();
-                sessions.addSession("login", enterlogin, request);
+                if (request.getParameter("remember") != null) {
+                    Sessions sessions = new SessionsImpl();
+                    sessions.addSession("login", enterlogin, request);
+                }
+
+                //secret code
 
                 String name = usersService.getParameterByLogin("name", enterlogin) + " " + usersService.getParameterByLogin("lastname", enterlogin);
                 String gender = usersService.getParameterByLogin("gender", enterlogin);
@@ -100,18 +102,26 @@ public class UsersController {
             String telephone = request.getParameter("phone");
 
             if(Validator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
-                usersService.addUser(User.builder()
-                        .login(login)
-                        .password(password)
-                        .name(name)
-                        .lastname(lastname)
-                        .gender(gender)
-                        .bday(bday)
-                        .city(city)
-                        .telephone(telephone)
-                        .email(email)
-                        .build());
-                modelAndView.setViewName("success");
+                if (usersService.exists(login)) {
+                    if (usersService.existingEmail(email)) {
+                        usersService.addUser(User.builder()
+                                .login(login)
+                                .password(password)
+                                .name(name)
+                                .lastname(lastname)
+                                .gender(gender)
+                                .bday(bday)
+                                .city(city)
+                                .telephone(telephone)
+                                .email(email)
+                                .build());
+                        modelAndView.setViewName("success");
+                    } else {
+                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
+                    }
+                } else {
+                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
+                }
             } else {
                 modelAndView = workWithModelAndViews.throwException("You have to fill all fields", "index");
             }

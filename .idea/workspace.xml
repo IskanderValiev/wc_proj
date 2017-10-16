@@ -2,75 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bc0debd-45a8-4491-8eff-2f777a4848ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/PlayersController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/TeamsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoJdbcTemplateImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/Country.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/countriesservices/CountryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/countriesservices/CountryServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/playersservices/PlayersService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/playersservices/PlayersServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDaoJdbcImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/META-INF/context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/PlayersDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/UsersDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/UsersDaoJdbcImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/UsersDoaJdbcTemplateImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/UsersService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/UsersServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/PlayersDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/UsersDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/UsersDaoJdbcImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/UsersDoaJdbcTemplateImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/UsersService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/services/UsersServiceImpl.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/UsersService.java" afterPath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/services/UsersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/_metadata_/metadata.values.at" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/AuthController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/ExitController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/adminnews.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/controllers/UsersController.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/controllers/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/CrudDao.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/CrudDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/modelandviews/WorkWithModelAndViews.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/modelandviews/WorkWithModelAndViews.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/modelandviews/WorkWithModelAndViewsImpl.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/modelandviews/WorkWithModelAndViewsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/models/Player$PlayerBuilder.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/models/Player$PlayerBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/models/Player.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/models/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/usersdao/UsersDao.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/usersdao/UsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/usersdao/UsersDoaJdbcTemplateImpl.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/dao/usersdao/UsersDoaJdbcTemplateImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/usersservices/UsersService.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/usersservices/UsersService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/usersservices/UsersServiceImpl.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/services/usersservices/UsersServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/sessions/Sessions.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/sessions/Sessions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/sessions/SessionsImpl.class" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/sessions/SessionsImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controllers/UsersController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/UsersController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CrudDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CrudDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/modelandviews/WorkWithModelAndViews.class" afterPath="$PROJECT_DIR$/target/classes/modelandviews/WorkWithModelAndViews.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/modelandviews/WorkWithModelAndViewsImpl.class" afterPath="$PROJECT_DIR$/target/classes/modelandviews/WorkWithModelAndViewsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/models/Player$PlayerBuilder.class" afterPath="$PROJECT_DIR$/target/classes/models/Player$PlayerBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/models/Player.class" afterPath="$PROJECT_DIR$/target/classes/models/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/usersdao/UsersDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/usersdao/UsersDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/usersdao/UsersDoaJdbcTemplateImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/usersdao/UsersDoaJdbcTemplateImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/usersservices/UsersService.class" afterPath="$PROJECT_DIR$/target/classes/services/usersservices/UsersService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services/usersservices/UsersServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/services/usersservices/UsersServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sessions/Sessions.class" afterPath="$PROJECT_DIR$/target/classes/sessions/Sessions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sessions/SessionsImpl.class" afterPath="$PROJECT_DIR$/target/classes/sessions/SessionsImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorldCup2018Proj.iml" afterPath="$PROJECT_DIR$/WorldCup2018Proj.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/CrudDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/CrudDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDaoJdbcTemplateImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDaoJdbcTemplateImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViews.java" afterPath="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViews.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViewsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViewsImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java" afterPath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sessions/Sessions.java" afterPath="$PROJECT_DIR$/src/main/java/sessions/Sessions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/cities.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/cities.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/application-context.xml" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/classes/application-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/dispatcherServlet-servlet.xml" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/dispatcherServlet-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/cities.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/cities.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/contact.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/contact.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/galary.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/galary.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/homepage.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/homepage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/homepage/style.css" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/homepage/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/index.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/matches.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/matches.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/profile.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/profile.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/style.css" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-context.xml" afterPath="$PROJECT_DIR$/target/classes/application-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/teams.jsp" afterPath="$PROJECT_DIR$/target/WorldCup2018Proj-1.0-SNAPSHOT/worldcup/teams.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
@@ -144,31 +125,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dispatcherServlet-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="11" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+            <state relative-caret-position="210">
+              <caret line="24" column="103" lean-forward="false" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayersService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/playersservices/PlayersService.java">
+      <file leaf-file-name="ExitController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ExitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="0">
+              <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SessionsImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+            <state relative-caret-position="-61">
+              <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,82 +167,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayersDaoJdbcTemplateImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDaoJdbcTemplateImpl.java">
+      <file leaf-file-name="cities.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/cities.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-              <folding>
-                <element signature="e#1496#2299#0" expanded="false" />
-                <element signature="method#save#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
-                <element signature="e#3592#3593#0" expanded="true" />
-                <element signature="e#3619#3620#0" expanded="true" />
-                <element signature="method#delete#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
-                <element signature="method#update#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
-                <marker date="1507992923298" expanded="true" signature="639:791" ph="INSERT INTO players... " />
-                <marker date="1507992923298" expanded="true" signature="885:912" ph="SELECT * FRO... players" />
-                <marker date="1507992923298" expanded="true" signature="885:928" ph="SELECT * FRO... players" />
-                <marker date="1507992923298" expanded="true" signature="1025:1071" ph="SELECT * FRO... players" />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountriesDaoJdbcTemplateImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoJdbcTemplateImpl.java">
+      <file leaf-file-name="matches.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="35" column="102" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="102" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#delete#0;class#CountriesDaoJdbcTemplateImpl#0" expanded="false" />
-                <element signature="method#update#0;class#CountriesDaoJdbcTemplateImpl#0" expanded="false" />
-                <element signature="e#2916#2917#0" expanded="true" />
-                <element signature="e#2943#2944#0" expanded="true" />
-                <marker date="1507996632826" expanded="true" signature="667:711" ph="SELECT * FRO... country" />
-                <marker date="1507996632826" expanded="true" signature="801:862" ph="INSERT INTO country... " />
-                <marker date="1507996632826" expanded="true" signature="948:969" ph="SELECT * FRO... country" />
-                <marker date="1507996632826" expanded="true" signature="1063:1151" ph="SELECT * FRO... country" />
-              </folding>
+            <state relative-caret-position="452">
+              <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teams.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp">
+      <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="564">
+              <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="121" column="10" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="121" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="249" column="56" lean-forward="false" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
+            <state relative-caret-position="77">
+              <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/console.sql">
+      <file leaf-file-name="adminnews.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/adminnews.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -262,8 +232,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -291,44 +261,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/authorization.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cookies/Cookies.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cookies/CookiesImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/success.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/authorization.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/validators/Validator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/DispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/PlayersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sessions/Sessions.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDaoJdbcImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDaoJdbcImpl.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/services/userusservices/UsersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UsersServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/playersservices/PlayersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CrudDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViews.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/worldcup/images/teams.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/countriesservices/CountryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/modelandviews/WorkWithModelAndViewsImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Country.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/TeamsController.java" />
@@ -336,12 +285,33 @@
         <option value="$PROJECT_DIR$/src/main/java/services/playersservices/PlayersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/playersdao/PlayersDaoJdbcTemplateImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoJdbcTemplateImpl.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security-config.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/sessions/Sessions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/console.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/validators/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/cities.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ExitController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/adminnews.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp" />
       </list>
     </option>
   </component>
@@ -367,7 +337,7 @@
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="22" />
-    <option name="width" value="1396" />
+    <option name="width" value="1397" />
     <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -388,9 +358,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -430,100 +398,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="countriesdao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="playersdao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="usersdao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="modelandviews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="countriesservices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="playersservices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="usersservices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="sessions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
@@ -531,14 +406,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
@@ -547,30 +414,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="worldcup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="worldcup" type="462c0819:PsiDirectoryNode" />
-              <item name="galary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WorldCup2018Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WorldCup2018Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="worldcup" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -841,12 +692,14 @@
       <workItem from="1507559612328" duration="25654000" />
       <workItem from="1507736829222" duration="3919000" />
       <workItem from="1507794633814" duration="67650000" />
-      <workItem from="1508052080921" duration="912000" />
+      <workItem from="1508052080921" duration="16428000" />
+      <workItem from="1508085833323" duration="6951000" />
+      <workItem from="1508152811777" duration="9399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206516000" />
+    <option name="totallyTimeSpent" value="238382000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,16 +726,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3784764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36033857" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36033857" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4050786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4050786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23676682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18526466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -909,7 +762,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18240343" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18240343" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -921,14 +774,14 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4050786" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23390558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18526466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -941,99 +794,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/galary/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/authorization.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/validators/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/success.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/DispatcherServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sessions/Sessions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cookies/CookiesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/authorization.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="222" column="38" lean-forward="false" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDaoJdbcImpl.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDaoJdbcImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,15 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,23 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PlayersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,49 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/listeners/ServletListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1507887978783" expanded="true" signature="585:709" ph="INSERT INTO users... " />
-            <marker date="1507887978783" expanded="true" signature="788:823" ph="SELECT * FRO... users" />
-            <marker date="1507887978783" expanded="true" signature="1020:1062" ph="SELECT passw... users" />
-            <marker date="1507887978783" expanded="true" signature="4119:4171" ph="SELECT missi... users" />
-            <marker date="1507887978783" expanded="true" signature="4419:4458" ph="SELECT login... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1297">
-          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,9 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,9 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,47 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TeamsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/countriesservices/CountryServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#357#358#0" expanded="false" />
-            <element signature="e#402#403#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-516">
-          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,10 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1256,6 +913,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="102" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security-config.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sessions/Sessions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="81" column="28" lean-forward="false" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="61" lean-forward="false" selection-start-line="138" selection-start-column="61" selection-end-line="138" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TeamsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PlayersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="77" lean-forward="false" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/galary.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/DbException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/DuplicateEntryException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/validators/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="134" column="26" lean-forward="false" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/usersdao/UsersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/usersservices/UsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3370">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/usersservices/UsersServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+          <folding>
+            <element signature="e#640#641#0" expanded="false" />
+            <element signature="e#685#686#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="4" lean-forward="false" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1267,8 +1068,6 @@
           <folding>
             <element signature="e#1496#2299#0" expanded="false" />
             <element signature="method#save#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
-            <element signature="e#3592#3593#0" expanded="true" />
-            <element signature="e#3619#3620#0" expanded="true" />
             <element signature="method#delete#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
             <element signature="method#update#0;class#PlayersDaoJdbcTemplateImpl#0" expanded="false" />
             <marker date="1507992923298" expanded="true" signature="639:791" ph="INSERT INTO players... " />
@@ -1279,72 +1078,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/countriesdao/CountriesDaoJdbcTemplateImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="102" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#delete#0;class#CountriesDaoJdbcTemplateImpl#0" expanded="false" />
-            <element signature="method#update#0;class#CountriesDaoJdbcTemplateImpl#0" expanded="false" />
-            <element signature="e#2916#2917#0" expanded="true" />
-            <element signature="e#2943#2944#0" expanded="true" />
-            <marker date="1507996632826" expanded="true" signature="667:711" ph="SELECT * FRO... country" />
-            <marker date="1507996632826" expanded="true" signature="801:862" ph="INSERT INTO country... " />
-            <marker date="1507996632826" expanded="true" signature="948:969" ph="SELECT * FRO... country" />
-            <marker date="1507996632826" expanded="true" signature="1063:1151" ph="SELECT * FRO... country" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22cb2fe7-4468-4e8c-ae8c-aa7be48c0fd4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="76" column="59" lean-forward="false" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="11" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="249" column="56" lean-forward="false" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/teams.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        <state relative-caret-position="900">
+          <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/contact.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" column="10" lean-forward="false" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sessions/SessionsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="103" lean-forward="false" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ExitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/cities.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="121" column="10" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="121" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/matches.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/adminnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/worldcup/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="191" column="23" lean-forward="true" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

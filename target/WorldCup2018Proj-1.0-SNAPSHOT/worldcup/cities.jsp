@@ -11,61 +11,71 @@
 <head>
     <title>Cities</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="//web-ptica.ru/VRV-files/jquery-2.1.3.min.js"></script>
 </head>
 <body>
-<div id="container">
-
-    <div id="header">
-        <span style="vertical-align: -22px">Cities</span>
+<div class="main">
+    <div id="header"><a name="top"></a>
+        <div id="menu">
+            <ul class="menu">
+                <li><a href="/worldcup/homepage.jsp">Homepage</a></li>
+                <li><a href="/worldcup/matches.jsp">Matches</a>
+                    <ul>
+                        <li><a href="#">Group A</a></li>
+                        <li><a href="#">Group B</a></li>
+                        <li><a href="#">Group C</a></li>
+                        <li><a href="#">Group D</a></li>
+                        <li><a href="#">Group E</a></li>
+                        <li><a href="#">Group F</a></li>
+                        <li><a href="#">Group G</a></li>
+                        <li><a href="#">Group H</a></li>
+                    </ul>
+                </li>
+                <li><a href="/worldcup/cities.jsp">Cities</a>
+                    <ul>
+                        <li><a href="#kazan">Kazan</a></li>
+                        <li><a href="#moscow">Moscow</a></li>
+                        <li><a href="#spb">St. Petersburg</a></li>
+                        <li><a href="#sochi">Sochi</a></li>
+                        <li><a href="#kaliningrad">Kaliningrad</a></li>
+                        <li><a href="#saransk">Saransk</a></li>
+                        <li><a href="#">Nizhniy Novgorod</a></li>
+                        <li><a href="#">Rostov-On-Don</a></li>
+                        <li><a href="#">Volgograd</a></li>
+                        <li><a href="#">Ekaterinburg</a></li>
+                        <li><a href="#samara">Samara</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Stadiums</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/worldcup/galary.jsp">Galary</a></li>
+                <li><a href="/worldcup/contact.jsp">Contacts</a></li>
+            </ul>
+        </div>
+        <div id="profile-menu">
+            <ul class="profile-menu">
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/exit">Exit</a></li>
+            </ul>
+        </div>
     </div>
     <hr>
 
-    <div id="navigation">
-        <table>
-            <tr>
-                <td><u>Menu:</u></td>
-            </tr>
-            <tr>
-                <td><a href="/profile">Profile</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/matches.jsp">Matches</a></td>
-            </tr>
-            <tr>
-                <td><a href="cities.html">Cities</a></td>
-            </tr>
-            <tr>
-                <td><a href="staduims.html">Stadiums</a></td>
-            </tr>
-            <tr>
-                <td><a href=#>Galary</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/contact.jsp">Contacts</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/authorization.html">Exit</a></td>
-            </tr>
-        </table>
-    </div>
 
     <div id="content">
-        <h3>Kazan</h3>
+        <h3><a name="kazan">Kazan</a></h3>
         <img src="images/kazan.jpg">
-        <h3>Moscow</h3>
+        <h3><a name="moscow">Moscow</a></h3>
         <img src="images/moscow.jpg">
-        <h3>St. Petersburg</h3>
+        <h3><a name="spb">St. Petersburg</a></h3>
         <img src="images/spb.jpg">
-        <h3>Sochi</h3>
+        <h3><a name="sochi">Sochi</a></h3>
         <img src="images/sch.jpg">
-        <h3>Kaliningrad</h3>
+        <h3><a name="kaliningrad">Kaliningrad</a></h3>
         <img src="images/kgd.jpg">
-        <h3>Samara</h3>
+        <h3><a name="samara">Samara</a></h3>
         <img src="images/smr.jpg">
-        <h3>Saransk</h3>
+        <h3><a name="saransk">Saransk</a></h3>
         <img src="images/srn.jpg">
         <h3>Volgograd</h3>
         <img src="images/vlg.jpg">
@@ -77,10 +87,12 @@
         <img src="images/ekt.jpg">
     </div>
 
+
     <div id="footer">
         <img src="images/system/sponsors.png">
     </div>
 
 </div>
+<script type="text/javascript" src="//web-ptica.ru/VRV-files/knopkavverh/10.js"></script>
 </body>
 </html>

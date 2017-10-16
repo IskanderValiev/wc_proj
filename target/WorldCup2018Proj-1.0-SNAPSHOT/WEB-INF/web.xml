@@ -8,8 +8,12 @@
         <!--<welcome-file>worldcup/authorization.html</welcome-file>-->
     <!--</welcome-file-list>-->
     
+    <!--<welcome-file-list>-->
+        <!--<welcome-file>worldcup/index.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
+    
     <welcome-file-list>
-        <welcome-file>worldcup/index.jsp</welcome-file>
+        <welcome-file>/entrance</welcome-file>
     </welcome-file-list>
 
     <servlet>

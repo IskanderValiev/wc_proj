@@ -66,51 +66,61 @@
             width: 100%;
         }
     </style>
+    <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            jQuery("#user-city").text(ymaps.geolocation.city);
+        }
+    </script>
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=en-RU" type="text/javascript"></script>
 </head>
 <body>
 <div id="container">
     <div id="header">
-        <span style="vertical-align: -22px">Profile</span>
-        <table class="userlogin">
-            <tr>
-                <td>Hello, ${login}</td>
-            </tr>
-        </table>
+        <div id="menu">
+            <ul class="menu">
+                <li><a href="/worldcup/homepage.jsp">Homepage</a></li>
+                <li><a href="/worldcup/matches.jsp">Matches</a>
+                    <ul>
+                        <li><a href="#">Group A</a></li>
+                        <li><a href="#">Group B</a></li>
+                        <li><a href="#">Group C</a></li>
+                        <li><a href="#">Group D</a></li>
+                        <li><a href="#">Group E</a></li>
+                        <li><a href="#">Group F</a></li>
+                        <li><a href="#">Group G</a></li>
+                        <li><a href="#">Group H</a></li>
+                    </ul>
+                </li>
+                <li><a href="/worldcup/cities.jsp">Cities</a>
+                    <ul>
+                        <li><a href="#">Kazan</a></li>
+                        <li><a href="#">Moscow</a></li>
+                        <li><a href="#">St. Petersburg</a></li>
+                        <li><a href="#">Sochi</a></li>
+                        <li><a href="#">Kaliningrad</a></li>
+                        <li><a href="#">Saransk</a></li>
+                        <li><a href="#">Nizhniy Novgorod</a></li>
+                        <li><a href="#">Rostov-On-Don</a></li>
+                        <li><a href="#">Volgograd</a></li>
+                        <li><a href="#">Ekaterinburg</a></li>
+                        <li><a href="#">Samara</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Stadiums</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/worldcup/galary.jsp">Galary</a></li>
+                <li><a href="/worldcup/contact.jsp">Contacts</a></li>
+            </ul>
+        </div>
+        <div id="profile-menu">
+            <ul class="profile-menu">
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/exit">Exit</a></li>
+            </ul>
+        </div>
     </div>
     <hr>
-
-    <div id="navigation">
-        <table>
-            <tr>
-                <td><u>Menu:</u></td>
-            </tr>
-            <tr>
-                <td><a href="/profile">Profile</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/homepage.jsp">Homepage</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/matches.jsp">Matches</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/cities.jsp">Cities</a></td>
-            </tr>
-            <tr>
-                <td><a href="staduims.html">Stadiums</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/galary.jsp">Galary</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/contact.jsp">Contacts</a></td>
-            </tr>
-            <tr>
-                <td><a href="/worldcup/authorization.html">Exit</a></td>
-            </tr>
-        </table>
-    </div>
-
     <div id="content">
         <div class="image">
             <img src="/worldcup/images/system/null.jpg" width="200" height="200">
@@ -120,7 +130,7 @@
         <div class="information">
             <table class="info">
                 <tr>
-                    <td><label><font size="25px">${name}</font></label></td>
+                    <td><label><font size="20px">${name}</font></label></td>
                 </tr>
                 <tr>
                     <td><hr></td>
@@ -131,6 +141,9 @@
                 <tr>
                     <td><label>City: ${city}</label></td>
                 </tr>
+                <%--<tr>--%>
+                    <%--<td><label>Current city:<div id="user-city"></div></label></td>--%>
+                <%--</tr>--%>
                 <tr>
                     <td><label>Gender: ${gender}</label></td>
                 </tr>

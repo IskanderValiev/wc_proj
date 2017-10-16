@@ -10,6 +10,7 @@ body{
   font-family: "Dusha", sans-serif;
   color: #353535;
   background-image: url('images/background.png');
+    z-index: 1;
 }
 
 a{
@@ -21,9 +22,10 @@ ul {
 }
 
 .main {
-    max-width: 100%;
-    margin: 0px auto;
-    size: cover;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    float: left;
 }
 
 #header {
@@ -243,24 +245,28 @@ hr {
 }
 
 /*Teams style*/
-.content {
-    width: 90%;
-    background-color: #CCCC99;
-    margin: auto;
-    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.5);
+.teams {
+    background-color: #971E00;
+    width: 84%;
+    float: left;
+    margin: 0 8% 0 8%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+
 }
 
 .team {
+    background-color: #CCCC99;
     position: relative;
-    width: 35%;
-    height: 275px;
+    width: 30%;
+    height: 225px;
     margin: 50px 100px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background: rgba(180, 180, 180, 1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     padding: 5px;
     float: left;
 }
+
 .team img {
     width: 100%;
     height: 100%;

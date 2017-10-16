@@ -7,15 +7,14 @@ import javax.servlet.http.HttpSession;
 public class SessionsImpl implements Sessions {
 
     @Override
-    public void addSession(String name, String value, HttpServletRequest request) {
+    public void addSession(String name, Object value, HttpServletRequest request) {
         HttpSession session = request.getSession();
         session.setAttribute(name, value);
     }
 
     @Override
-    public HttpSession getSession(String name, HttpServletRequest request) {
+    public Object getSession(String name, HttpServletRequest request) {
         HttpSession session = request.getSession();
-        session.getAttribute(name);
-        return session;
+        return session.getAttribute(name);
     }
 }

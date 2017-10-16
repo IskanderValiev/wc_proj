@@ -6,4 +6,6 @@ public interface UsersService {
     void addUser(User user);
     String getParameterByLogin(String paramName, String login);
     String getLoginByEmail(String email);
+    boolean exists(String login);
+    boolean existingEmail(String email);
 }

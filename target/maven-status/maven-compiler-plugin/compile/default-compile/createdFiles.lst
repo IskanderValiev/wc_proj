@@ -8,6 +8,7 @@ modelandviews/WorkWithModelAndViews.class
 modelandviews/WorkWithModelAndViewsImpl.class
 services/playersservices/PlayersServiceImpl.class
 controllers/UsersController.class
+controllers/AuthController.class
 dao/countriesdao/CountriesDaoJdbcTemplateImpl.class
 models/Country.class
 cookies/CookiesImpl.class
@@ -28,5 +29,6 @@ models/Player.class
 services/usersservices/UsersServiceImpl.class
 models/Player$PlayerBuilder.class
 services/playersservices/PlayersService.class
+controllers/ExitController.class
 services/countriesservices/CountryServiceImpl.class
 exceptions/DbException.class

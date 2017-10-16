@@ -136,6 +136,7 @@
                 <tr>
                     <td><input type="text" name="enterlogin"></td>
                     <td><input type="password" name="enterpass"></td>
+                    <td><input type="checkbox" name="remember" checked>Remember me</td>
                     <td><input type="submit" name="signin" value="Sign In"></td>
                 </tr>
             </table>

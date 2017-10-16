@@ -58,12 +58,12 @@
         <div id="profile-menu">
             <ul class="profile-menu">
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/worldcup/authorization.html">Exit</a></li>
+                <li><a href="/exit">Exit</a></li>
             </ul>
         </div>
     </div>
     <hr>
-    <div class="content">
+    <div class="teams">
         <c:forEach items ="${countries}" var="country">
             <div class="team">
                 <img src="${country.flag}" alt="${country.name}">

@@ -40,6 +40,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Stadiums</a></li>
+                <li><a href="/teams">Teams</a></li>
                 <li><a href="/worldcup/galary.jsp">Galary</a></li>
                 <li><a href="/worldcup/contact.jsp">Contacts</a></li>
             </ul>
@@ -47,7 +48,7 @@
         <div id="profile-menu">
             <ul class="profile-menu">
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="/worldcup/authorization.html">Exit</a></li>
+                <li><a href="/exit">Exit</a></li>
             </ul>
         </div>
     </div>

@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSession;
 
 public interface Sessions {
 
-    void addSession(String name, String value, HttpServletRequest request);
-    HttpSession getSession(String name, HttpServletRequest request);
+    void addSession(String name, Object value, HttpServletRequest request);
+    Object getSession(String name, HttpServletRequest request);
 
 }

@@ -23,4 +23,14 @@ public class UsersServiceImpl implements UsersService {
     public String getLoginByEmail(String email) {
         return usersDao.getLoginByEmail(email);
     }
+
+    @Override
+    public boolean exists(String login) {
+        return usersDao.exists(login);
+    }
+
+    @Override
+    public boolean existingEmail(String email) {
+        return usersDao.existingEmail(email);
+    }
 }
