@@ -2,6 +2,7 @@ package controllers;
 
 import cookies.Cookies;
 import cookies.CookiesImpl;
+import encoders.Encoder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import modelandviews.WorkWithModelAndViews;
@@ -15,10 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 import services.usersservices.UsersService;
 import sessions.Sessions;
 import sessions.SessionsImpl;
-import validators.Validator;
+import validators.UsersValidator;
 
+import javax.security.auth.login.LoginException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.security.NoSuchAlgorithmException;
 
 @Controller
 @AllArgsConstructor
@@ -45,7 +48,7 @@ public class UsersController {
 
 
     @RequestMapping(value = "/profile", method = {RequestMethod.POST})
-    public ModelAndView entrance(@RequestParam(value = "signin", required = false) String signin, HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView entrance(@RequestParam(value = "signin", required = false) String signin, HttpServletRequest request, HttpServletResponse response) throws LoginException, NoSuchAlgorithmException{
 
         ModelAndView modelAndView = new ModelAndView();
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
@@ -53,7 +56,7 @@ public class UsersController {
         if (signin != null) {
 
             String enterlogin = request.getParameter("enterlogin");
-            String enterpassword = request.getParameter("enterpass");
+            String enterpassword = Encoder.encrypt(usersService.getParameterByLogin("salt", enterlogin) + request.getParameter(  "enterpass"));
             String email = usersService.getParameterByLogin("email", enterlogin);
 
             if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin)) &&
@@ -85,7 +88,7 @@ public class UsersController {
     }
 
     @RequestMapping(value = "/success", method = RequestMethod.POST)
-    public ModelAndView addUser(@RequestParam(value = "signup", required = false) String signup, HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView addUser(@RequestParam(value = "signup", required = false) String signup, HttpServletRequest request, HttpServletResponse response) throws LoginException, NoSuchAlgorithmException{
         ModelAndView modelAndView = new ModelAndView();
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         if (signup != null) {
@@ -101,12 +104,14 @@ public class UsersController {
             String email = request.getParameter("email");
             String telephone = request.getParameter("phone");
 
-            if(Validator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
-                if (usersService.exists(login)) {
-                    if (usersService.existingEmail(email)) {
+            String salt = Encoder.salt();
+
+            if(UsersValidator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
+//                if (!usersService.exists(login)) {
+//                    if (usersService.existingEmail(email)) {
                         usersService.addUser(User.builder()
                                 .login(login)
-                                .password(password)
+                                .password(Encoder.encrypt(salt + password))
                                 .name(name)
                                 .lastname(lastname)
                                 .gender(gender)
@@ -114,14 +119,15 @@ public class UsersController {
                                 .city(city)
                                 .telephone(telephone)
                                 .email(email)
+                                .salt(salt)
                                 .build());
                         modelAndView.setViewName("success");
-                    } else {
-                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
-                    }
-                } else {
-                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
-                }
+//                    } else {
+//                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
+//                    }
+//                } else {
+//                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
+//                }
             } else {
                 modelAndView = workWithModelAndViews.throwException("You have to fill all fields", "index");
             }

@@ -15,7 +15,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     //language=SQL
     private static final String SQL_INSERT_USER =
-            "INSERT INTO users (login, password, name, lastname, gender, bday, city, telephone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            "INSERT INTO users (login, password, name, lastname, gender, bday, city, telephone, email, salt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
     //language=SQL
     private static final String SQL_SELECT_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
@@ -28,11 +28,12 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     //language=SQL
     private static final String SQL_CHECKING_USER_EXISTENCE =
-            "SELECT id FROM users WHERE login = ?;";
+            "SELECT id FROM users WHERE login = ?";
 
     //language=SQL
     private static final String SQL_CHECKING_EMAIL_EXISTANCE =
-            "SELECT id FROM users WHERE email = ?;";
+            "SELECT id FROM users WHERE email = ?";
+
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -47,11 +48,11 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     private RowMapper<User> userRowMapper = (resultSet, rowNumber) -> {
         // смотрим id текущего пользователя
-        Long currentOwnerId = resultSet.getLong(1);
+        Long currentUserId = resultSet.getLong(1);
         // если такой пользователь еще не был зарегистрирован - кладем его в map
-        if (users.get(currentOwnerId) == null) {
-            users.put(currentOwnerId,User.builder()
-                    .id(currentOwnerId)
+        if (users.get(currentUserId) == null) {
+            users.put(currentUserId,User.builder()
+                    .id(currentUserId)
                     .login(resultSet.getString(2))
                     .password(resultSet.getString(3))
                     .name(resultSet.getString(4))
@@ -60,9 +61,10 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
                     .bday(resultSet.getString(7))
                     .city(resultSet.getString(8))
                     .telephone(resultSet.getString(9))
+                    .salt(resultSet.getString(11))
                     .build());
         }
-        return users.get(currentOwnerId);
+        return users.get(currentUserId);
     };
 
     @Override
@@ -81,6 +83,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
                     preparedStatement.setString(7, model.getCity());
                     preparedStatement.setString(8, model.getTelephone());
                     preparedStatement.setString(9, model.getEmail());
+                    preparedStatement.setString(10, model.getSalt());
                     return preparedStatement;
                 },
                 keyHolder);
@@ -125,13 +128,15 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     @Override
     public boolean exists(String login) {
-        Long id = template.queryForObject(SQL_CHECKING_USER_EXISTENCE, Long.class);
+        Long id = template.queryForObject(SQL_CHECKING_USER_EXISTENCE, new String[]{login}, Long.class);
         return id != null;
     }
 
     @Override
     public boolean existingEmail(String email) {
-        Long id = template.queryForObject(SQL_CHECKING_EMAIL_EXISTANCE, Long.class);
+        Long id = template.queryForObject(SQL_CHECKING_EMAIL_EXISTANCE,new String[]{email}, Long.class);
         return id != null;
     }
+
+
 }

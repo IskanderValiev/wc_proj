@@ -6,9 +6,11 @@ controllers/TeamsController.class
 sessions/SessionsImpl.class
 modelandviews/WorkWithModelAndViews.class
 modelandviews/WorkWithModelAndViewsImpl.class
+encoders/Encoder.class
 services/playersservices/PlayersServiceImpl.class
 controllers/UsersController.class
 controllers/AuthController.class
+controllers/NewsController.class
 dao/countriesdao/CountriesDaoJdbcTemplateImpl.class
 models/Country.class
 cookies/CookiesImpl.class

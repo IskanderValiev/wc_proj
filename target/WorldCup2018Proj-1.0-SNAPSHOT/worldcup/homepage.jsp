@@ -9,7 +9,7 @@
   <!-- Стили -->
   <link rel="stylesheet" href="homepage/slick/slick.css">
   <link rel="stylesheet" href="homepage/slick/slick-theme.css">
-  <link rel="stylesheet" href="homepage/style.css">
+  <link rel="stylesheet" href="/worldcup/homepage/style.css">
     <script>
         var deadline = '14/06/2018 17:00:00';
         function getTimeRemaining(endtime) {
@@ -95,9 +95,9 @@
                   <li><a href="/worldcup/contact.jsp">Contacts</a></li>
               </ul>
           </div>
-          <div id = "clockdiv">
-              Before WC2018: <span class="days"></span><span class="hours"></span><span class="minutes"></span><span class="seconds"></span>
-          </div>
+          <%--<div id = "clockdiv">--%>
+              <%--Before WC2018: <span class="days"></span><span class="hours"></span><span class="minutes"></span><span class="seconds"></span>--%>
+          <%--</div>--%>
           <div id="profile-menu">
               <ul class="profile-menu">
                   <li><a href="/profile">Profile</a></li>
@@ -143,7 +143,7 @@
 
       <div class="information">
           <div class="block1">
-              <a href="#">
+              <a href="adminnews.jsp">
                   <img src="homepage/images/news.jpg" alt="news" class="info_img">
                   <div class="info_text">
                       <h3 class="info_header">News 1</h3>

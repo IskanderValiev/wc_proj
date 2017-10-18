@@ -19,4 +19,6 @@ public interface WorkWithModelAndViews {
     ModelAndView throwException(String message, String viewName);
 
     ModelAndView showAllTeams(List<Country> countryList, String viewName);
+
+    ModelAndView addNews(String newsHeader, String newsText, String viewName);
 }

@@ -41,7 +41,16 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
     public ModelAndView showAllTeams(List<Country> countryList, String viewName) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("countries", countryList);
-        modelAndView.setViewName("teams");
+        modelAndView.setViewName(viewName);
+        return modelAndView;
+    }
+
+    @Override
+    public ModelAndView addNews(String newsHeader, String newsText, String viewName) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("newsHeader", newsHeader);
+        modelAndView.addObject("newsText", newsText);
+        modelAndView.setViewName(viewName);
         return modelAndView;
     }
 }

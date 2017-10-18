@@ -23,7 +23,6 @@ public class TeamsController {
     public ModelAndView getAllCountries() {
         ModelAndView modelAndView;
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
-//        System.out.println("countries: " + countryService.getAllCountries().toString());
         modelAndView = workWithModelAndViews.showAllTeams(countryService.getAllCountries(), "teams");
         return modelAndView;
     }
