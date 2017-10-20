@@ -8,4 +8,5 @@ public interface UsersService {
     String getLoginByEmail(String email);
     boolean exists(String login);
     boolean existingEmail(String email);
+    boolean isAdmin(String login);
 }

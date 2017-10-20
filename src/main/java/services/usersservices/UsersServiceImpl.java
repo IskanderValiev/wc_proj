@@ -33,4 +33,9 @@ public class UsersServiceImpl implements UsersService {
     public boolean existingEmail(String email) {
         return usersDao.existingEmail(email);
     }
+
+    @Override
+    public boolean isAdmin(String login) {
+        return usersDao.isAdmin(login);
+    }
 }

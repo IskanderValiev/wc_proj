@@ -1,5 +1,7 @@
 package encoders;
 
+import org.jasypt.util.text.BasicTextEncryptor;
+
 import javax.security.auth.login.LoginException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -23,5 +25,17 @@ public class Encoder {
             stringBuilder.append(symbols.charAt((int)(Math.random()*symbols.length())));
         }
         return stringBuilder.toString();
+    }
+
+    public static String encryptCookie(String password, String value) {
+        BasicTextEncryptor encryptor = new BasicTextEncryptor();
+        encryptor.setPassword(password);
+        return encryptor.encrypt(value);
+    }
+
+    public static String decryptCookie(String password, String value) {
+        BasicTextEncryptor decrypter = new BasicTextEncryptor();
+        decrypter.setPassword(password);
+        return decrypter.decrypt(value);
     }
 }

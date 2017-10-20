@@ -1,6 +1,7 @@
 package modelandviews;
 
 import models.Country;
+import models.News;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -47,10 +48,32 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
 
     @Override
     public ModelAndView addNews(String newsHeader, String newsText, String viewName) {
+        return null;
+    }
+
+    @Override
+    public ModelAndView showAllContent(List<News> newsList, List<News> articleList, List<News> blogList, String viewName) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("newsHeader", newsHeader);
-        modelAndView.addObject("newsText", newsText);
+        modelAndView.addObject("news", newsList);
+        modelAndView.addObject("articles", articleList);
+        modelAndView.addObject("blogs", blogList);
         modelAndView.setViewName(viewName);
         return modelAndView;
     }
+
+//    @Override
+//    public ModelAndView showArcticles(List<News> newsList, String viewName) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("articles", newsList);
+//        modelAndView.setViewName(viewName);
+//        return modelAndView;
+//    }
+//
+//    @Override
+//    public ModelAndView showBlogs(List<News> newsList, String viewName) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("blogs", newsList);
+//        modelAndView.setViewName(viewName);
+//        return modelAndView;
+//    }
 }

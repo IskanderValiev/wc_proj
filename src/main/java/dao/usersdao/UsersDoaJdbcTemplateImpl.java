@@ -34,6 +34,10 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     private static final String SQL_CHECKING_EMAIL_EXISTANCE =
             "SELECT id FROM users WHERE email = ?";
 
+    //language=SQL
+    private static final String SQL_SELECT_STATUS =
+            "SELECT status FROM users WHERE login = ?";
+
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -138,5 +142,8 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
         return id != null;
     }
 
-
+    @Override
+    public boolean isAdmin(String login) {
+        return template.queryForObject(SQL_SELECT_STATUS, new String[] {login}, Boolean.class);
+    }
 }

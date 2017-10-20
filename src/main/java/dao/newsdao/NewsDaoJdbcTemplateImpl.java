@@ -1,6 +1,5 @@
 package dao.newsdao;
 
-import models.Country;
 import models.News;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -22,7 +21,15 @@ public class NewsDaoJdbcTemplateImpl implements NewsDao {
 
     //language=SQL
     private static final String SQL_SELECT_ALL_NEWS =
-            "INSERT * FROM news";
+            "SELECT * FROM news WHERE news_type = :news_type";
+
+    //language=SQL
+    private static final String SQL_SELECT_ALL_ARTICLES =
+            "SELECT * FROM news WHERE news_type = ?";
+
+    //language=SQL
+    private static final String SQL_SELECT_ALL_BLOGS =
+            "SELECT * FROM news WHERE news_type = ?";
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -37,12 +44,12 @@ public class NewsDaoJdbcTemplateImpl implements NewsDao {
 
     private RowMapper<News> newsRowMapper = (resultSet, rowNumber) ->
             News.builder()
-                    .id(resultSet.getLong(1))
-                    .header(resultSet.getString(2))
-                    .content(resultSet.getString(3))
-                    .image(resultSet.getString(4))
-                    .date(resultSet.getDate(5))
-                    .type(resultSet.getString(6))
+                    .id(resultSet.getLong(6))
+                    .header(resultSet.getString(1))
+                    .content(resultSet.getString(2))
+                    .image(resultSet.getString(3))
+                    .date(resultSet.getDate(4))
+                    .type(resultSet.getString(5))
                     .build();
 
     @Override
@@ -51,7 +58,7 @@ public class NewsDaoJdbcTemplateImpl implements NewsDao {
         template.update(
                 connection -> {
                     PreparedStatement preparedStatement =
-                            connection.prepareStatement(SQL_INSERT_NEWS, new String[]{"id"});
+                            connection.prepareStatement(SQL_INSERT_NEWS, new String[]{"news_id"});
                     preparedStatement.setString(1, model.getHeader());
                     preparedStatement.setString(2, model.getContent());
                     preparedStatement.setString(3, model.getImage());
@@ -61,6 +68,13 @@ public class NewsDaoJdbcTemplateImpl implements NewsDao {
                 },
                 keyHolder);
         model.setId(keyHolder.getKey().longValue());
+//        template.update(SQL_INSERT_NEWS, new Object[] {
+//                model.getHeader(),
+//                model.getContent(),
+//                model.getImage(),
+//                model.getDate(),
+//                model.getType()
+//        });
     }
 
     @Override
@@ -80,6 +94,22 @@ public class NewsDaoJdbcTemplateImpl implements NewsDao {
 
     @Override
     public List<News> getAllNews() {
-        return template.query(SQL_SELECT_ALL_NEWS, newsRowMapper);
+        Map<String, Object> params = new HashMap<>();
+        params.put("news_type", "News");
+        return namedParameterTemplate.query(SQL_SELECT_ALL_NEWS, params, newsRowMapper);
+    }
+
+    @Override
+    public List<News> getAllArticles() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("news_type", "Article");
+        return namedParameterTemplate.query(SQL_SELECT_ALL_NEWS, params, newsRowMapper);
+    }
+
+    @Override
+    public List<News> getAllBlogs() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("news_type", "Blog");
+        return namedParameterTemplate.query(SQL_SELECT_ALL_NEWS, params, newsRowMapper);
     }
 }

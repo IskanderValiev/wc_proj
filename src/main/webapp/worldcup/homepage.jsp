@@ -143,7 +143,7 @@
 
       <div class="information">
           <div class="block1">
-              <a href="adminnews.jsp">
+              <a href="/news">
                   <img src="homepage/images/news.jpg" alt="news" class="info_img">
                   <div class="info_text">
                       <h3 class="info_header">News 1</h3>

@@ -80,6 +80,14 @@
             <!--<artifactId>spring-security-core</artifactId>-->
             <!--<version>3.1.0.RELEASE</version>-->
         <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.jasypt/jasypt -->
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

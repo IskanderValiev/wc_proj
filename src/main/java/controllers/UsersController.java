@@ -19,6 +19,7 @@ import sessions.SessionsImpl;
 import validators.UsersValidator;
 
 import javax.security.auth.login.LoginException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.security.NoSuchAlgorithmException;
@@ -35,7 +36,8 @@ public class UsersController {
         ModelAndView modelAndView;
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         Cookies cookies = new CookiesImpl();
-        String login = cookies.getCookie("login", request).getValue();
+        Cookie cookie = cookies.getCookie("login", request);
+        String login = Encoder.decryptCookie("iskander", cookie.getValue());
         String name = usersService.getParameterByLogin("name", login) + " " + usersService.getParameterByLogin("lastname", login);
         String gender = usersService.getParameterByLogin("gender", login);
         String bday = usersService.getParameterByLogin("bday", login);
@@ -59,18 +61,15 @@ public class UsersController {
             String enterpassword = Encoder.encrypt(usersService.getParameterByLogin("salt", enterlogin) + request.getParameter(  "enterpass"));
             String email = usersService.getParameterByLogin("email", enterlogin);
 
-            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin)) &&
-                    enterlogin.equals(usersService.getLoginByEmail(email))) {
+            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin))) {
 
                 Cookies cookies = new CookiesImpl();
-                cookies.addCookie("login", enterlogin, response, 60*60);
+                cookies.addCookie("login", Encoder.encryptCookie("iskander", enterlogin), response, 60*60);
 
                 if (request.getParameter("remember") != null) {
                     Sessions sessions = new SessionsImpl();
                     sessions.addSession("login", enterlogin, request);
                 }
-
-                //secret code
 
                 String name = usersService.getParameterByLogin("name", enterlogin) + " " + usersService.getParameterByLogin("lastname", enterlogin);
                 String gender = usersService.getParameterByLogin("gender", enterlogin);
@@ -107,8 +106,8 @@ public class UsersController {
             String salt = Encoder.salt();
 
             if(UsersValidator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
-//                if (!usersService.exists(login)) {
-//                    if (usersService.existingEmail(email)) {
+                if (!usersService.exists(login)) {
+                    if (!usersService.existingEmail(email)) {
                         usersService.addUser(User.builder()
                                 .login(login)
                                 .password(Encoder.encrypt(salt + password))
@@ -122,12 +121,12 @@ public class UsersController {
                                 .salt(salt)
                                 .build());
                         modelAndView.setViewName("success");
-//                    } else {
-//                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
-//                    }
-//                } else {
-//                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
-//                }
+                    } else {
+                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
+                    }
+                } else {
+                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
+                }
             } else {
                 modelAndView = workWithModelAndViews.throwException("You have to fill all fields", "index");
             }

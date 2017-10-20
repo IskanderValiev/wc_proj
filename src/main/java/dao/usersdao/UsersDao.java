@@ -13,4 +13,5 @@ public interface UsersDao extends CrudDao<User, Long> {
     String getLoginByEmail(String email);
     boolean exists(String login);
     boolean existingEmail(String email);
+    boolean isAdmin(String login);
 }
