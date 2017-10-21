@@ -15,13 +15,13 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     //language=SQL
     private static final String SQL_INSERT_USER =
-            "INSERT INTO users (login, password, name, lastname, gender, bday, city, telephone, email, salt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            "INSERT INTO users (\"login\", password, name, lastname, gender, bday, city, telephone, email, salt) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
     //language=SQL
     private static final String SQL_SELECT_BY_LOGIN = "SELECT * FROM users WHERE login = ?";
 
     //language=SQL
-    private static final String SQL_DELETE_BY_ID = "DELETE * FROM users WHERE login = ?";
+    private static final String SQL_DELETE_BY_LOGIN = "DELETE FROM users WHERE login = ?";
 
     //language=SQL
     private static final String SQL_SELECT_PASSWORD_BY_LOGIN = "SELECT password FROM users WHERE login = ?";
@@ -37,6 +37,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     //language=SQL
     private static final String SQL_SELECT_STATUS =
             "SELECT status FROM users WHERE login = ?";
+
 
 
     private JdbcTemplate template;
@@ -103,7 +104,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
 
     @Override
     public void delete(Long id) {
-        template.update(SQL_DELETE_BY_ID, id);
+        template.update(SQL_DELETE_BY_LOGIN, id);
     }
 
     @Override
@@ -117,7 +118,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     @Override
     public String getColumnByLogin(String columnName, String login) {
         //language=SQL
-        String sql_select_column_by_login = "SELECT " + columnName + " FROM users WHERE login = ?";
+        String sql_select_column_by_login = "SELECT \"" + columnName + "\" FROM users WHERE login = ?";
 
         return template.queryForObject(sql_select_column_by_login, new String[]{login}, String.class);
     }
@@ -125,7 +126,7 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     @Override
     public String getLoginByEmail(String email) {
         //language=SQL
-        String sql_select_login_by_password = "SELECT login FROM users WHERE email = ?";
+        String sql_select_login_by_password = "SELECT \"login\" FROM \"users\" WHERE \"email\" = ?";
         return template.queryForObject(sql_select_login_by_password, new String[]{email}, String.class);
 
     }
@@ -145,5 +146,13 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     @Override
     public boolean isAdmin(String login) {
         return template.queryForObject(SQL_SELECT_STATUS, new String[] {login}, Boolean.class);
+    }
+
+    @Override
+    public void updateUsersData(String login, String changeableColumnName, String value) {
+        //language=SQL
+        String sql_update_users = "UPDATE users SET \"" + changeableColumnName + "\"=\'" + value + "\' WHERE login = ?";
+        template.update(sql_update_users, login);
+
     }
 }

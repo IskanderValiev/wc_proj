@@ -15,7 +15,19 @@ public interface WorkWithModelAndViews {
                            String city,
                            String telephone,
                            String email,
+                           String image,
                            String viewName);
+
+    ModelAndView showUsersData(String login,
+                               String name,
+                               String lastname,
+                               String gender,
+                               String bday,
+                               String city,
+                               String telephone,
+                               String email,
+                               String image,
+                               String viewName);
 
     ModelAndView throwException(String message, String viewName);
 
@@ -25,7 +37,4 @@ public interface WorkWithModelAndViews {
 
     ModelAndView showAllContent(List<News> newsList, List<News> articleList, List<News> blogList, String viewName);
 
-//    ModelAndView showArcticles(List<News> newsList, String viewName);
-
-//    ModelAndView showBlogs(List<News> newsList, String viewName);
 }

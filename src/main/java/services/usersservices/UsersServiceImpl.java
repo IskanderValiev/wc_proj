@@ -38,4 +38,9 @@ public class UsersServiceImpl implements UsersService {
     public boolean isAdmin(String login) {
         return usersDao.isAdmin(login);
     }
+
+    @Override
+    public void updateUsersData(String login, String chandeableColumnName, String value) {
+        usersDao.updateUsersData(login, chandeableColumnName, value);
+    }
 }

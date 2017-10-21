@@ -123,7 +123,7 @@
     <hr>
     <div id="content">
         <div class="image">
-            <img src="/worldcup/images/system/null.jpg" width="200" height="200">
+            <img src="${image}" width="200" height="200" style="background-color: white;">
             <a href=""></a>
         </div>
 
@@ -132,8 +132,11 @@
                 <tr>
                     <td><label><font size="20px">${name}</font></label></td>
                 </tr>
-                <tr>
-                    <td><hr></td>
+                <tr style="height: 5px">
+                    <td style="height: 2px"><hr></td>
+                    <td><div class="edit">
+                        <a href="/editprofile" style="margin-bottom: 0">edit</a>
+                    </div></td>
                 </tr>
                 <tr>
                     <td><label>Bday: ${bday}</label></td>

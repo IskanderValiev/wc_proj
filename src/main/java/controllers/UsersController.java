@@ -44,7 +44,8 @@ public class UsersController {
         String city = usersService.getParameterByLogin("city", login);
         String telephone = usersService.getParameterByLogin("telephone", login);
         String email = usersService.getParameterByLogin("email", login);
-        modelAndView = workWithModelAndViews.showUsersData(login, name, gender, bday, city, telephone, email, "profile");
+        String image = usersService.getParameterByLogin("photo", login);
+        modelAndView = workWithModelAndViews.showUsersData(login, name, gender, bday, city, telephone, email, image, "profile");
         return modelAndView;
     }
 
@@ -59,12 +60,13 @@ public class UsersController {
 
             String enterlogin = request.getParameter("enterlogin");
             String enterpassword = Encoder.encrypt(usersService.getParameterByLogin("salt", enterlogin) + request.getParameter(  "enterpass"));
+//            String enterpassword = request.getParameter("enterpass");
             String email = usersService.getParameterByLogin("email", enterlogin);
 
             if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin))) {
 
                 Cookies cookies = new CookiesImpl();
-                cookies.addCookie("login", Encoder.encryptCookie("iskander", enterlogin), response, 60*60);
+                cookies.addCookie("login", Encoder.encryptCookie("iskander", enterlogin), response, 365*24*60*60);
 
                 if (request.getParameter("remember") != null) {
                     Sessions sessions = new SessionsImpl();
@@ -76,8 +78,9 @@ public class UsersController {
                 String bday = usersService.getParameterByLogin("bday", enterlogin);
                 String city = usersService.getParameterByLogin("city", enterlogin);
                 String telephone = usersService.getParameterByLogin("telephone", enterlogin);
+                String image = usersService.getParameterByLogin("photo", enterlogin);
 
-                modelAndView = workWithModelAndViews.showUsersData(enterlogin, name, gender, bday, city, telephone, email, "profile");
+                modelAndView = workWithModelAndViews.showUsersData(enterlogin, name, gender, bday, city, telephone, email, image, "profile");
                 modelAndView.setViewName("redirect:/profile");
             } else {
                 modelAndView = workWithModelAndViews.throwException("Login or password is incorrect.", "index");

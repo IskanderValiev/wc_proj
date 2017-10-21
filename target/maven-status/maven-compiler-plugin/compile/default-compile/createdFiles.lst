@@ -23,6 +23,7 @@ dao/playersdao/PlayersDaoJdbcTemplateImpl.class
 listeners/ServletListener.class
 dao/countriesdao/CountriesDao.class
 dao/playersdao/PlayersDao.class
+controllers/EditProfileController.class
 dao/usersdao/UsersDoaJdbcTemplateImpl.class
 services/usersservices/UsersService.class
 dao/newsdao/NewsDaoJdbcTemplateImpl.class
@@ -32,6 +33,7 @@ exceptions/DuplicateEntryException.class
 cookies/Cookies.class
 services/countriesservices/CountryService.class
 dao/CrudDao.class
+comparators/DateComporator.class
 models/Player.class
 services/usersservices/UsersServiceImpl.class
 models/Player$PlayerBuilder.class

@@ -16,7 +16,8 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
                           String city,
                           String telephone,
                           String email,
-                          String view) {
+                          String image,
+                          String viewName) {
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("login", login);
@@ -26,7 +27,34 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
         modelAndView.addObject("city", city);
         modelAndView.addObject("telephone", telephone);
         modelAndView.addObject("email", email);
-        modelAndView.setViewName(view);
+        modelAndView.addObject("image", image);
+        modelAndView.setViewName(viewName);
+        return modelAndView;
+    }
+
+    @Override
+    public ModelAndView showUsersData(String login,
+                                      String name,
+                                      String lastname,
+                                      String gender,
+                                      String bday,
+                                      String city,
+                                      String telephone,
+                                      String email,
+                                      String image,
+                                      String viewName) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("login", login);
+        modelAndView.addObject("name", name);
+        modelAndView.addObject("lastname", lastname);
+        modelAndView.addObject("gender", gender);
+        modelAndView.addObject("bday", bday);
+        modelAndView.addObject("city", city);
+        modelAndView.addObject("telephone", telephone);
+        modelAndView.addObject("email", email);
+        modelAndView.addObject("image", image);
+        modelAndView.setViewName(viewName);
         return modelAndView;
     }
 
@@ -61,19 +89,14 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
         return modelAndView;
     }
 
-//    @Override
-//    public ModelAndView showArcticles(List<News> newsList, String viewName) {
+//    public ModelAndView showAllInformation(String name, String bday, String city, String gender, String email, String instagram) {
 //        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.addObject("articles", newsList);
-//        modelAndView.setViewName(viewName);
-//        return modelAndView;
-//    }
-//
-//    @Override
-//    public ModelAndView showBlogs(List<News> newsList, String viewName) {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.addObject("blogs", newsList);
-//        modelAndView.setViewName(viewName);
+//        modelAndView.addObject("name", name);
+//        modelAndView.addObject("bday", bday);
+//        modelAndView.addObject("city", city);
+//        modelAndView.addObject("gender", gender);
+//        modelAndView.addObject("email", email);
+//        modelAndView.addObject("instagram", instagram);
 //        return modelAndView;
 //    }
 }

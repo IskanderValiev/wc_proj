@@ -169,9 +169,26 @@ hr {
     border-spacing: 0;
 }
 
-/*News style*/
-#newsBlock {
+.information td {
+    text-align: left;
+}
 
+.information hr {
+    float: left;
+    width: 100%;
+    margin: 2px 0 0 2px ;
+}
+
+.edit {
+    float: right;
+    margin-bottom: 0;
+    margin-right: 0;
+    font-size: 16px;
+}
+
+.edit a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 

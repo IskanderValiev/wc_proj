@@ -38,4 +38,5 @@ public class Encoder {
         decrypter.setPassword(password);
         return decrypter.decrypt(value);
     }
+
 }

@@ -20,6 +20,7 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/exceptions/DuplicateEntryException.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/UsersController.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/TeamsController.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/comparators/DateComporator.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/models/Country.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/usersdao/UsersDao.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/listeners/ServletListener.java
@@ -28,6 +29,7 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/services/newsservices/NewsServiceImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/playersdao/PlayersDao.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/usersdao/UsersDoaJdbcTemplateImpl.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/EditProfileController.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/playersdao/PlayersDaoJdbcTemplateImpl.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/sessions/Sessions.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/cookies/Cookies.java
