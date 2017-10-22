@@ -38,6 +38,9 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
     private static final String SQL_SELECT_STATUS =
             "SELECT status FROM users WHERE login = ?";
 
+    //language=SQL
+    private static final String SQL_SELECT_LOGIN_BY_PASSWORD =
+            "SELECT login FROM users WHERE password = ?";
 
 
     private JdbcTemplate template;
@@ -154,5 +157,10 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
         String sql_update_users = "UPDATE users SET \"" + changeableColumnName + "\"=\'" + value + "\' WHERE login = ?";
         template.update(sql_update_users, login);
 
+    }
+
+    @Override
+    public String getLoginByPassword(String password) {
+        return template.queryForObject(SQL_SELECT_PASSWORD_BY_LOGIN, new String[]{password}, String.class);
     }
 }

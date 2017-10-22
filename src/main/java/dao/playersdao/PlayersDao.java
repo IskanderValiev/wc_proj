@@ -8,4 +8,5 @@ import java.util.List;
 public interface PlayersDao extends CrudDao<Player, Long> {
     List<Player> findAllByClub(String club);
     List<Player> findAllByCountry(String country);
+    String getClub(String club);
 }

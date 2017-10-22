@@ -10,4 +10,5 @@ public interface UsersService {
     boolean existingEmail(String email);
     boolean isAdmin(String login);
     void updateUsersData(String login, String chandeableColumnName, String value);
+    String getLoginByPassword(String password);
 }

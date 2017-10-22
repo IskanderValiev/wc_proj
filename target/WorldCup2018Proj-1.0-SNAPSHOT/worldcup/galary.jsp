@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Galary</title>
-    <link rel="stylesheet" type="text/css" href="galary/style.css">
+    <link rel="stylesheet" type="text/css" href="/worldcup/galary/style.css">
 </head>
 <body>
 <div class="main">

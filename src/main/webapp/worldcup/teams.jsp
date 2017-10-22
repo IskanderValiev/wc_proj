@@ -65,12 +65,14 @@
     <hr>
     <div class="teams">
         <c:forEach items ="${countries}" var="country">
-            <div class="team">
-                <img src="${country.flag}" alt="${country.name}">
-                <div class="team_name">
-                    <font size="30px">${country.name}</font>
+            <form action="/squad" method="get">
+                <div class="team">
+                    <input type="image" src="${country.flag}" alt="${country.name}" value="${country.name}" name="countryName">
+                    <div class="team_name">
+                        <font size="30px">${country.name}</font>
+                    </div>
                 </div>
-            </div>
+            </form>
         </c:forEach>
     </div>
 </div>

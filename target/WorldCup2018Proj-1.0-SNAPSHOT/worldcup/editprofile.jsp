@@ -115,7 +115,7 @@
     <hr>
     <div id="content">
         <div class="image">
-            <img src="/worldcup/images/system/null.jpg" width="200" height="200">
+            <img src="${image}" width="200" height="200">
             <input type="text" form="editing" name="image" style="width: 100%; margin: 0 0 0 0; float: left">
         </div>
 

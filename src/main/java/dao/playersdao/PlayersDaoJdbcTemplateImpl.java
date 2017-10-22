@@ -26,7 +26,11 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
 
     //language=SQL
     private static final String SQL_SELECT_ALL_BY_COUNTRY =
-            "SELECT * FROM players WHERE player_country = ?;";
+            "SELECT * FROM players WHERE player_country = ?";
+
+    //language=SQL
+    private static final String SQL_SELECT_CLUB =
+            "SELECT player_club FROM players WHERE player_club = ?";
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -101,9 +105,14 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
 
     @Override
     public List<Player> findAllByCountry(String country) {
-        Map<String, Object> params = new HashMap<>();
-        params.put("player_country", country);
-        return namedParameterTemplate.query(SQL_SELECT_ALL_BY_CLUB,
-                params, playerRowMapper);
+//        Map<String, Object> params = new HashMap<>();
+//        params.put("player_country", country);
+//        return namedParameterTemplate.query(SQL_SELECT_ALL_BY_COUNTRY, params, playerRowMapper);
+        return template.query(SQL_SELECT_ALL_BY_COUNTRY, new String[]{country}, playerRowMapper);
+    }
+
+    @Override
+    public String getClub(String club) {
+        return template.queryForObject(SQL_SELECT_CLUB, new String[]{club}, String.class);
     }
 }

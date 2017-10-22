@@ -2,6 +2,7 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/PlayersController.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/encoders/Encoder.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/newsdao/NewsDaoJdbcTemplateImpl.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/clubsdao/ClubsDao.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/services/newsservices/NewsService.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/validators/UsersValidator.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/modelandviews/WorkWithModelAndViewsImpl.java
@@ -23,6 +24,8 @@
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/comparators/DateComporator.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/models/Country.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/usersdao/UsersDao.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/dao/clubsdao/ClubsDaoJdbcTemplateImpl.java
+/Users/isko/Desktop/WorldCup2018Proj/src/main/java/models/Club.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/listeners/ServletListener.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/NewsController.java
 /Users/isko/Desktop/WorldCup2018Proj/src/main/java/controllers/AuthController.java

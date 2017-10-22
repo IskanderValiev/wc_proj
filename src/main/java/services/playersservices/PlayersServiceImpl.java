@@ -15,4 +15,9 @@ public class PlayersServiceImpl implements PlayersService {
     public List<Player> getAllPlayersByCountry(String country) {
         return playersDao.findAllByCountry(country);
     }
+
+    @Override
+    public String getClub(String club) {
+        return playersDao.getClub(club);
+    }
 }

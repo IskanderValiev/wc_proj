@@ -15,4 +15,5 @@ public interface UsersDao extends CrudDao<User, Long> {
     boolean existingEmail(String email);
     boolean isAdmin(String login);
     void updateUsersData(String login, String changeableColumnName , String value);
+    String getLoginByPassword(String password);
 }

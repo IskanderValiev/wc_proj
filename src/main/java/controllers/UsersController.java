@@ -63,7 +63,8 @@ public class UsersController {
 //            String enterpassword = request.getParameter("enterpass");
             String email = usersService.getParameterByLogin("email", enterlogin);
 
-            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin))) {
+            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin)) &&
+                    enterlogin.equals(usersService.getLoginByPassword(enterpassword))) {
 
                 Cookies cookies = new CookiesImpl();
                 cookies.addCookie("login", Encoder.encryptCookie("iskander", enterlogin), response, 365*24*60*60);
@@ -109,8 +110,8 @@ public class UsersController {
             String salt = Encoder.salt();
 
             if(UsersValidator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
-                if (!usersService.exists(login)) {
-                    if (!usersService.existingEmail(email)) {
+//                if (!usersService.exists(login)) {
+//                    if (!usersService.existingEmail(email)) {
                         usersService.addUser(User.builder()
                                 .login(login)
                                 .password(Encoder.encrypt(salt + password))
@@ -124,12 +125,12 @@ public class UsersController {
                                 .salt(salt)
                                 .build());
                         modelAndView.setViewName("success");
-                    } else {
-                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
-                    }
-                } else {
-                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
-                }
+//                    } else {
+//                        modelAndView = workWithModelAndViews.throwException("User with such email already exists", "index");
+//                    }
+//                } else {
+//                    modelAndView = workWithModelAndViews.throwException("User with such login already exists", "index");
+//                }
             } else {
                 modelAndView = workWithModelAndViews.throwException("You have to fill all fields", "index");
             }

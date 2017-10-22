@@ -43,4 +43,9 @@ public class UsersServiceImpl implements UsersService {
     public void updateUsersData(String login, String chandeableColumnName, String value) {
         usersDao.updateUsersData(login, chandeableColumnName, value);
     }
+
+    @Override
+    public String getLoginByPassword(String password) {
+        return usersDao.getLoginByPassword(password);
+    }
 }

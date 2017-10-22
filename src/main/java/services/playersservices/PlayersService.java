@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface PlayersService {
     List<Player> getAllPlayersByCountry(String country);
+    String getClub(String club);
 }

@@ -1,7 +1,12 @@
+@font-face {
+    font-family: Dusha;
+    src: url('/worldcup/homepage/slick/fonts/Dusha - FIFA World Cup 2018.otf');
+}
+
 body {
-     background-image: url('/worldcup/images/system/background.png');
-     color: #ffffff;
-     font-family: DushaV5-Regular;
+    font-family: "Dusha", sans-serif;
+    background-image: url('/worldcup/images/system/background.png');
+    color: #ffffff;
 }
 
 #container {
