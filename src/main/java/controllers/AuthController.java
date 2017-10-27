@@ -12,17 +12,19 @@ import sessions.SessionsImpl;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class AuthController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView entry(HttpServletRequest request) {
+    public ModelAndView entry(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView();
+        request.getSession(true);
         Cookies cookies = new CookiesImpl();
-        Cookie cookie = cookies.getCookie("login", request);
+        Cookie cookie = cookies.getCookie("login", request, response);
         String cookieDecryption = "";
-        if (cookie != null && !cookie.getValue().equals("")) {
+        if (cookie != null && !cookie.getValue().equals("guest")) {
             cookieDecryption = Encoder.decryptCookie("iskander", cookie.getValue());
         }
         Sessions sessions = new SessionsImpl();

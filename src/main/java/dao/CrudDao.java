@@ -15,3 +15,4 @@ public interface CrudDao<M, I> {
 
     void update(M model);
 }
+//insert salt in cookies

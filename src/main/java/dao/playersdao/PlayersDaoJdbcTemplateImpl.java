@@ -32,6 +32,7 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
     private static final String SQL_SELECT_CLUB =
             "SELECT player_club FROM players WHERE player_club = ?";
 
+
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
 
@@ -114,5 +115,12 @@ public class PlayersDaoJdbcTemplateImpl implements PlayersDao {
     @Override
     public String getClub(String club) {
         return template.queryForObject(SQL_SELECT_CLUB, new String[]{club}, String.class);
+    }
+
+    @Override
+    public String getColumnByName(String columnName, String name) {
+        //language=SQL
+        String sql = "SELECT \"" + columnName + "\" FROM players WHERE player_name = ?";
+        return template.queryForObject(sql, new String[]{name}, String.class);
     }
 }

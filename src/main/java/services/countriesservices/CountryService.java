@@ -7,4 +7,5 @@ import java.util.Map;
 
 public interface CountryService {
     List<Country> getAllCountries();
+    String getColumnByName(String columnName, String name);
 }

@@ -14,7 +14,7 @@ public class CookiesImpl implements Cookies{
     }
 
     @Override
-    public Cookie getCookie(String name, HttpServletRequest req) {
+    public Cookie getCookie(String name, HttpServletRequest req, HttpServletResponse response) {
         Cookie[] cookies = req.getCookies();
 
         Cookie cookie = null;
@@ -24,6 +24,11 @@ public class CookiesImpl implements Cookies{
                 cookie = cookies[i];
                 break;
             }
+        }
+        if (cookie == null) {
+            cookie = new Cookie(name, "guest");
+            cookie.setMaxAge(365*24*60*60);
+            response.addCookie(cookie);
         }
         return cookie;
     }

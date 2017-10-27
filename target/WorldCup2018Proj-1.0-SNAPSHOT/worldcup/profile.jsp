@@ -42,29 +42,7 @@
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="/worldcup/style.css">
     <style type="text/css">
-        .information {
-            background: clear;
-            font-size: 25px;
-            float: left;
-            width: 60%;
-        }
 
-        .image {
-            background: #CCCC99;
-            float: left;
-            width: 250px;
-            height: 250px;
-            margin: 0px 50px 0px 50px;
-        }
-
-        .image img {
-            margin: 25px 25px 25px 25px;
-        }
-
-        .info {
-            text-align: left;
-            width: 100%;
-        }
     </style>
     <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">

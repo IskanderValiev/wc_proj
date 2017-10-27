@@ -20,11 +20,13 @@ dao/CrudDao.class
 comparators/DateComporator.class
 services/usersservices/UsersServiceImpl.class
 models/Player$PlayerBuilder.class
+services/clubsservices/ClubService.class
 controllers/ExitController.class
 dao/clubsdao/ClubsDao.class
 models/Country$CountryBuilder.class
 validators/NewsValidator.class
 controllers/TeamsController.class
+services/clubsservices/ClubServiceImpl.class
 sessions/SessionsImpl.class
 modelandviews/WorkWithModelAndViews.class
 services/playersservices/PlayersServiceImpl.class

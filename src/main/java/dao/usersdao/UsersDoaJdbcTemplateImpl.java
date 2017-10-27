@@ -65,8 +65,8 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
                     .password(resultSet.getString(3))
                     .name(resultSet.getString(4))
                     .lastname(resultSet.getString(5))
-                    .gender(resultSet.getString(6))
-                    .bday(resultSet.getString(7))
+                    .gender(resultSet.getBoolean(6))
+                    .bday(resultSet.getDate(7))
                     .city(resultSet.getString(8))
                     .telephone(resultSet.getString(9))
                     .salt(resultSet.getString(11))
@@ -86,8 +86,8 @@ public class UsersDoaJdbcTemplateImpl implements UsersDao {
                     preparedStatement.setString(2, model.getPassword());
                     preparedStatement.setString(3, model.getName());
                     preparedStatement.setString(4, model.getLastname());
-                    preparedStatement.setString(5, model.getGender());
-                    preparedStatement.setString(6, model.getBday());
+                    preparedStatement.setBoolean(5, model.isGender());
+                    preparedStatement.setDate(6, model.getBday());
                     preparedStatement.setString(7, model.getCity());
                     preparedStatement.setString(8, model.getTelephone());
                     preparedStatement.setString(9, model.getEmail());

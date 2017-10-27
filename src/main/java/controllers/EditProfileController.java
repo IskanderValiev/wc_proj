@@ -16,6 +16,7 @@ import services.usersservices.UsersService;
 import javax.security.auth.login.LoginException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.security.NoSuchAlgorithmException;
 
 @Controller
@@ -26,11 +27,11 @@ public class EditProfileController {
     private UsersService usersService;
 
     @RequestMapping(value = "/editprofile", method = RequestMethod.GET)
-    public ModelAndView editProfile(HttpServletRequest request) {
+    public ModelAndView editProfile(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView;
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         Cookies cookies = new CookiesImpl();
-        Cookie cookie = cookies.getCookie("login", request);
+        Cookie cookie = cookies.getCookie("login", request, response);
         String login = Encoder.decryptCookie("iskander", cookie.getValue());
         System.out.println(login);
         String name = usersService.getParameterByLogin("name", login);
@@ -46,12 +47,12 @@ public class EditProfileController {
     }
 
     @RequestMapping(value = "/editprofile", method = RequestMethod.POST)
-    public ModelAndView submitChanges(HttpServletRequest request) throws LoginException, NoSuchAlgorithmException {
+    public ModelAndView submitChanges(HttpServletRequest request, HttpServletResponse response) throws LoginException, NoSuchAlgorithmException {
         ModelAndView modelAndView = new ModelAndView();
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
 
         Cookies cookies = new CookiesImpl();
-        Cookie cookie = cookies.getCookie("login", request);
+        Cookie cookie = cookies.getCookie("login", request, response);
         String login = Encoder.decryptCookie("iskander", cookie.getValue());
 
         String newName = request.getParameter("name");

@@ -7,34 +7,6 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="dao.usersdao.UsersDao" %>
-<%@ page import="dao.usersdao.UsersDoaJdbcTemplateImpl" %>
-<%@ page import="org.springframework.jdbc.datasource.DriverManagerDataSource" %>
-<%@ page import="cookies.Cookies" %>
-<%@ page import="cookies.CookiesImpl" %>
-
-
-<%
-    //    DriverManagerDataSource dataSource = new DriverManagerDataSource();
-//    dataSource.setUrl("jdbc:postgresql://localhost:5432/wc_proj_users");
-//    dataSource.setUsername("postgres");
-//    dataSource.setPassword("BVB09");
-//    UsersDao usersDao = new UsersDoaJdbcTemplateImpl(dataSource);
-//
-//    Cookies cookies = new CookiesImpl();
-//
-//    String login = cookies.getCookie("login", request).getValue();
-//    System.out.println(login);
-//
-//
-//    String name = usersDao.getColumnByLogin("name", login);
-//    String lastname = usersDao.getColumnByLogin("lastname", login);
-//    String city = usersDao.getColumnByLogin("city", login);
-//    String gender = usersDao.getColumnByLogin("gender", login);
-//    String email = usersDao.getColumnByLogin("email", login);
-//    String bday = usersDao.getColumnByLogin("bday", login);
-
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -182,18 +154,18 @@
 
                             <select name="bmon">
                                 <option value="0" disabled>Month</option>
-                                <option name="bmon" value="January">Jan</option>
-                                <option name="bmon" value="February">Feb</option>
-                                <option name="bmon" value="March">Mar</option>
-                                <option name="bmon" value="April">Apr</option>
-                                <option name="bmon" value="May">May</option>
-                                <option name="bmon" value="June">Jun</option>
-                                <option name="bmon" value="Jule">Jul</option>
-                                <option name="bmon" value="August">Aug</option>
-                                <option name="bmon" value="September">Sep</option>
-                                <option name="bmon" value="October">Oct</option>
-                                <option name="bmon" value="November">Nov</option>
-                                <option name="bmon" value="December">Dec</option>
+                                <option name="bmon" value="01">Jan</option>
+                                <option name="bmon" value="02">Feb</option>
+                                <option name="bmon" value="03">Mar</option>
+                                <option name="bmon" value="04">Apr</option>
+                                <option name="bmon" value="05">May</option>
+                                <option name="bmon" value="06">Jun</option>
+                                <option name="bmon" value="07">Jul</option>
+                                <option name="bmon" value="08">Aug</option>
+                                <option name="bmon" value="09">Sep</option>
+                                <option name="bmon" value="10">Oct</option>
+                                <option name="bmon" value="11">Nov</option>
+                                <option name="bmon" value="12">Dec</option>
                             </select>
 
                             <select name="byear">
@@ -256,9 +228,9 @@
                     <tr>
                         <td><label>Gender</label></td>
                         <td>
-                            <input type="radio" name="gender" value="Male" checked>
+                            <input type="radio" name="gender" value="true" checked>
                             <label>Male</label>
-                            <input type="radio" name="gender" value="Female">
+                            <input type="radio" name="gender" value="false">
                             <label>Female</label>
                         </td>
                     </tr>

@@ -2,6 +2,8 @@ package models;
 
 import lombok.*;
 
+import java.sql.Date;
+
 /**
  * Created by isko on 9/24/17.
  */
@@ -18,9 +20,9 @@ public class User {
     private String name;
     private String lastname;
     private String email;
-    private String bday;
+    private Date bday;
     private String city;
-    private String gender;
+    private boolean gender;
     private String telephone;
     private String salt;
 

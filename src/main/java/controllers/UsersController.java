@@ -23,6 +23,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 @Controller
 @AllArgsConstructor
@@ -32,14 +35,20 @@ public class UsersController {
     private UsersService usersService;
 
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
-    public ModelAndView openPage(HttpServletRequest request) {
+    public ModelAndView openPage(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView;
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         Cookies cookies = new CookiesImpl();
-        Cookie cookie = cookies.getCookie("login", request);
+        Cookie cookie = cookies.getCookie("login", request, response);
         String login = Encoder.decryptCookie("iskander", cookie.getValue());
         String name = usersService.getParameterByLogin("name", login) + " " + usersService.getParameterByLogin("lastname", login);
-        String gender = usersService.getParameterByLogin("gender", login);
+        String getGender = usersService.getParameterByLogin("gender", login);
+        String gender = "";
+        if (getGender.equals("t")) {
+            gender = "Male";
+        } else {
+            gender = "Female";
+        }
         String bday = usersService.getParameterByLogin("bday", login);
         String city = usersService.getParameterByLogin("city", login);
         String telephone = usersService.getParameterByLogin("telephone", login);
@@ -63,8 +72,7 @@ public class UsersController {
 //            String enterpassword = request.getParameter("enterpass");
             String email = usersService.getParameterByLogin("email", enterlogin);
 
-            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin)) &&
-                    enterlogin.equals(usersService.getLoginByPassword(enterpassword))) {
+            if (enterpassword.equals(usersService.getParameterByLogin("password", enterlogin))) {
 
                 Cookies cookies = new CookiesImpl();
                 cookies.addCookie("login", Encoder.encryptCookie("iskander", enterlogin), response, 365*24*60*60);
@@ -91,7 +99,7 @@ public class UsersController {
     }
 
     @RequestMapping(value = "/success", method = RequestMethod.POST)
-    public ModelAndView addUser(@RequestParam(value = "signup", required = false) String signup, HttpServletRequest request, HttpServletResponse response) throws LoginException, NoSuchAlgorithmException{
+    public ModelAndView addUser(@RequestParam(value = "signup", required = false) String signup, HttpServletRequest request, HttpServletResponse response) throws LoginException, NoSuchAlgorithmException, ParseException{
         ModelAndView modelAndView = new ModelAndView();
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         if (signup != null) {
@@ -101,15 +109,18 @@ public class UsersController {
             String cpassword = request.getParameter("cpassword");
             String name = request.getParameter("name");
             String lastname = request.getParameter("lname");
-            String gender = request.getParameter("gender");
-            String bday = request.getParameter("bday") + " " + request.getParameter("bmon") + " " + request.getParameter("byear");
+            boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
+
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+            java.util.Date parser = simpleDateFormat.parse(request.getParameter("byear")+ request.getParameter("bmon") + request.getParameter("bday"));
+            Date bday = new Date(parser.getTime());
             String city = request.getParameter("city");
             String email = request.getParameter("email");
             String telephone = request.getParameter("phone");
 
             String salt = Encoder.salt();
 
-            if(UsersValidator.isCorrect(login, password, cpassword, name, lastname, gender, bday, city, email, telephone)) {
+            if(UsersValidator.isCorrect(login, password, cpassword, name, lastname,  city, bday, email, telephone)) {
 //                if (!usersService.exists(login)) {
 //                    if (!usersService.existingEmail(email)) {
                         usersService.addUser(User.builder()

@@ -16,6 +16,7 @@ import services.newsservices.NewsService;
 import services.usersservices.UsersService;
 import validators.NewsValidator;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.util.List;
 
@@ -48,10 +49,10 @@ public class NewsController {
     }
 
     @RequestMapping(value = "/news", method = RequestMethod.GET)
-    public ModelAndView showNews(HttpServletRequest request) {
+    public ModelAndView showNews(HttpServletRequest request, HttpServletResponse response) {
         WorkWithModelAndViews workWithModelAndViews = new WorkWithModelAndViewsImpl();
         ModelAndView modelAndView;
-        String login = Encoder.decryptCookie("iskander", new CookiesImpl().getCookie("login", request).getValue());
+        String login = Encoder.decryptCookie("iskander", new CookiesImpl().getCookie("login", request, response).getValue());
 
         List<News> news = newsService.getAllNews();
         System.out.println(news.toString());

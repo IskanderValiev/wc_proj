@@ -81,15 +81,17 @@
                 <th>Club</th>
             </tr>
             <c:forEach items="${players}" var="player">
+                <form action="/playerinfo" method="get">
                     <tr>
                         <td>${player.number}</td>
                         <td>${player.position}</td>
-                        <td>${player.name}</td>
+                        <td><input type="submit" name="playerName" value="${player.name}" style="background-color: rgba(0, 0, 0, 0); border: none; color: white;"></td>
                         <td>${player.lastname}</td>
                         <td>${player.age}</td>
                         <td>${player.country}</td>
                         <td>${player.club}</td>
                     </tr>
+                </form>
             </c:forEach>
         </table>
     </div>

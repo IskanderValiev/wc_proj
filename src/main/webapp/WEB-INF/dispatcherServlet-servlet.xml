@@ -50,6 +50,9 @@
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
+    <bean name="clubsService" class="services.clubsservices.ClubServiceImpl">
+        <constructor-arg name="clubsDao" ref="clubsDao"/>
+    </bean>
 
     <bean name="clubsDao" id="clubsDao" class="dao.clubsdao.ClubsDaoJdbcTemplateImpl">
         <constructor-arg name="dataSource" ref="dataSource"/>

@@ -215,9 +215,9 @@
                     <tr>
                         <td><label for="gender">Gender<sup>•</sup></label></td>
                         <td>
-                            <input type="radio" id="gender" name="gender" value="Male">
+                            <input type="radio" id="gender" name="gender" value="true">
                             <label for="gender">Male</label>
-                            <input type="radio" id="gender" name="gender" value="Female">
+                            <input type="radio" name="gender" value="false">
                             <label for="gender">Female</label>
                         </td>
                     </tr>
@@ -262,18 +262,18 @@
 
                             <select name="bmon">
                                 <option value="0" disabled>Month</option>
-                                <option name="bmon" value="January">Jan</option>
-                                <option name="bmon" value="February">Feb</option>
-                                <option name="bmon" value="March">Mar</option>
-                                <option name="bmon" value="April">Apr</option>
-                                <option name="bmon" value="May">May</option>
-                                <option name="bmon" value="June">Jun</option>
-                                <option name="bmon" value="Jule">Jul</option>
-                                <option name="bmon" value="August">Aug</option>
-                                <option name="bmon" value="September">Sep</option>
-                                <option name="bmon" value="October">Oct</option>
-                                <option name="bmon" value="November">Nov</option>
-                                <option name="bmon" value="December">Dec</option>
+                                <option name="bmon" value="01">Jan</option>
+                                <option name="bmon" value="02">Feb</option>
+                                <option name="bmon" value="03">Mar</option>
+                                <option name="bmon" value="04">Apr</option>
+                                <option name="bmon" value="05">May</option>
+                                <option name="bmon" value="06">Jun</option>
+                                <option name="bmon" value="07">Jul</option>
+                                <option name="bmon" value="08">Aug</option>
+                                <option name="bmon" value="09">Sep</option>
+                                <option name="bmon" value="10">Oct</option>
+                                <option name="bmon" value="11">Nov</option>
+                                <option name="bmon" value="12">Dec</option>
                             </select>
 
                             <select name="byear">

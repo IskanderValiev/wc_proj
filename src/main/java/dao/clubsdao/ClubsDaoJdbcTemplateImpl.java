@@ -1,6 +1,8 @@
 package dao.clubsdao;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import models.Club;
 import models.Country;
 import models.News;
@@ -12,8 +14,13 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
+@Setter
 public class ClubsDaoJdbcTemplateImpl implements ClubsDao {
 
+    //language=SQL
+    private static final String SQL_SELECT_LOGO =
+            "SELECT club_logo FROM club WHERE club_name = ?";
 
     private JdbcTemplate template;
     private NamedParameterJdbcTemplate namedParameterTemplate;
@@ -56,6 +63,6 @@ public class ClubsDaoJdbcTemplateImpl implements ClubsDao {
 
     @Override
     public String getLogo(String clubName) {
-        return null;
+        return template.queryForObject(SQL_SELECT_LOGO, new String[]{clubName}, String.class);
     }
 }

@@ -89,7 +89,22 @@ public class WorkWithModelAndViewsImpl implements WorkWithModelAndViews {
         return modelAndView;
     }
 
-//    public ModelAndView showAllInformation(String name, String bday, String city, String gender, String email, String instagram) {
+    @Override
+    public ModelAndView showPlayerInfo(String number, String position, String name, String lastname, String age, String club, String country, String photo, String viewName) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("number", number);
+        modelAndView.addObject("position",  position);
+        modelAndView.addObject("name", name);
+        modelAndView.addObject("lastname", lastname);
+        modelAndView.addObject("age", age);
+        modelAndView.addObject("club", club);
+        modelAndView.addObject("country", country);
+        modelAndView.addObject("photo", photo);
+        modelAndView.setViewName(viewName);
+        return modelAndView;
+    }
+
+    //    public ModelAndView showAllInformation(String name, String bday, String city, String gender, String email, String instagram) {
 //        ModelAndView modelAndView = new ModelAndView();
 //        modelAndView.addObject("name", name);
 //        modelAndView.addObject("bday", bday);

@@ -16,4 +16,11 @@ public class CountryServiceImpl implements CountryService {
     public List<Country> getAllCountries() {
         return countriesDao.findALL();
     }
+
+    @Override
+    public String getColumnByName(String columnName, String name) {
+        return countriesDao.getColumnByName(columnName, name);
+    }
+
+
 }

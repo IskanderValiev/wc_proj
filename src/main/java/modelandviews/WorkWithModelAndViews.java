@@ -36,4 +36,6 @@ public interface WorkWithModelAndViews {
     ModelAndView addNews(String newsHeader, String newsText, String viewName);
 
     ModelAndView showAllContent(List<News> newsList, List<News> articleList, List<News> blogList, String viewName);
+
+    ModelAndView showPlayerInfo(String number, String position, String name, String lastname, String age, String club, String country, String photo, String viewName);
 }

@@ -20,4 +20,9 @@ public class PlayersServiceImpl implements PlayersService {
     public String getClub(String club) {
         return playersDao.getClub(club);
     }
+
+    @Override
+    public String getColumnByName(String columnName, String name) {
+        return playersDao.getColumnByName(columnName, name);
+    }
 }

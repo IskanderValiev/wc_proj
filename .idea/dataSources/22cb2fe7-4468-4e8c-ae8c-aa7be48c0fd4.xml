@@ -19,8 +19,8 @@
     </database>
     <schema id="6" parent="5" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-10-22.11:19:02.910</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1142</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-10-23.17:57:07.775</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1154</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -41,7 +41,7 @@
     </schema>
     <schema id="12" parent="5" name="wc_scheme">
       <ObjectId>16492</ObjectId>
-      <IntrospectionTimestamp>2017-10-22.10:15:34.351</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-10-23.17:56:40.923</IntrospectionTimestamp>
       <IntrospectionStateNumber>946</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
@@ -93,7 +93,7 @@
     </table>
     <table id="22" parent="6" name="users">
       <ObjectId>16485</ObjectId>
-      <StateNumber>1105</StateNumber>
+      <StateNumber>1154</StateNumber>
     </table>
     <sequence id="23" parent="12" name="wc_users_user_id_seq">
       <ObjectId>16496</ObjectId>
@@ -355,15 +355,15 @@ player_number</ColNames>
     </column>
     <column id="63" parent="22" name="gender">
       <Position>6</Position>
-      <DataType>varchar(6)|0</DataType>
+      <DataType>boolean|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>941</StateNumber>
+      <StateNumber>1153</StateNumber>
     </column>
     <column id="64" parent="22" name="bday">
       <Position>7</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>date|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>941</StateNumber>
+      <StateNumber>1154</StateNumber>
     </column>
     <column id="65" parent="22" name="city">
       <Position>8</Position>

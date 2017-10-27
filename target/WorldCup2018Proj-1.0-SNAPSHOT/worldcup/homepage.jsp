@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -195,7 +196,7 @@
   </div>
   <!-- Конец кода -->
   <!-- Подключаем скрипты -->
-  <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src = "<c:url value="http://yastatic.net/jquery/2.1.3/jquery.min.js"/>"></script>
   <script src="homepage/slick/slick.min.js"></script>
   <script src="homepage/js/js.js"></script>
 </body>

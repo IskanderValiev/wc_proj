@@ -97,4 +97,10 @@ public class CountriesDaoJdbcTemplateImpl implements CountriesDao {
     public List<Player> getAllPlayers() {
         return null;
     }
+
+    @Override
+    public String getColumnByName(String columnName, String name) {
+        String sql = "SELECT \"" + columnName + "\" FROM country WHERE country_name = ?";
+        return template.queryForObject(sql, new String[]{name}, String.class);
+    }
 }
